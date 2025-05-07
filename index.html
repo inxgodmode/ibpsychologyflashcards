@@ -1,603 +1,703 @@
-<!-- HM: Milner (1966) Section -->
-<div id="hm" class="section active">
-    <h2>HM: Milner (1966)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was HM's background and what led to his surgery?</div>
-            <div class="flashcard-back">HM was born in 1926 in Manchester, Connecticut. At age 7, he was hit by a cyclist, causing a head injury. Epileptic seizures started at age 10, likely due to the accident. By age 27, seizures were so severe that he couldn’t lead a normal life. Neurosurgeon William Scoville performed an experimental surgery, removing tissue from the medial temporal lobe, including the hippocampus, on both sides of HM’s brain.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Milner’s (1966) study on HM?</div>
-            <div class="flashcard-back">To investigate the effects of HM’s surgery (removal of the hippocampus and medial temporal lobe) on his memory and cognitive functions, particularly the role of the hippocampus in memory formation.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What research methods did Milner use to study HM?</div>
-            <div class="flashcard-back">Milner used method triangulation: psychometric testing (IQ tests), direct observation of behavior, interviews with HM and his family, cognitive testing (memory recall and learning tasks like reverse mirror drawing), and later MRI scans (by Corkin in 1992 and 2003) to assess brain damage.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key findings about HM’s memory after the surgery?</div>
-            <div class="flashcard-back">HM had severe anterograde amnesia (couldn’t form new episodic or semantic memories) and mild retrograde amnesia (lost about 1 year of memories before the surgery). He retained childhood memories, procedural memories (e.g., mowing a lawn), and working memory (e.g., recalling numbers with rehearsal). He could form cognitive maps (e.g., drawing his house layout) but couldn’t recall learning new skills like reverse mirror drawing.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does HM’s case study demonstrate localization of function in the brain?</div>
-            <div class="flashcard-back">HM’s case shows the hippocampus is critical for transferring short-term memories to long-term memory. Its removal caused anterograde amnesia, but short-term and procedural memories were intact, indicating these are stored elsewhere in the brain.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What brain study technique was used in HM’s case, and what did it reveal?</div>
-            <div class="flashcard-back">MRI scans (conducted by Corkin in 1992 and 2003) revealed damage to HM’s hippocampus and medial temporal lobe. This confirmed the hippocampus’s role in memory formation, as its damage explained HM’s inability to form new long-term memories.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does HM’s case study demonstrate research methods in the cognitive approach?</div>
-            <div class="flashcard-back">It’s a longitudinal case study using method triangulation (psychometric testing, interviews, observation, cognitive tasks). This allowed in-depth analysis of HM’s memory deficits over 50 years, providing rich qualitative and quantitative data.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does HM’s case evaluate the Multi-Store Model of memory?</div>
-            <div class="flashcard-back">HM’s case supports the Multi-Store Model by showing a distinction between short-term memory (intact, as he could hold conversations) and long-term memory (impaired, as he couldn’t form new memories). However, it challenges the model by showing procedural memory and cognitive maps were intact, suggesting long-term memory has multiple stores not accounted for in the model.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Milner’s study on HM?</div>
-            <div class="flashcard-back">Longitudinal design (over 50 years) allowed observation of changes over time. Method triangulation provided comprehensive data. High ecological validity, as HM was studied in his natural environment. Ethical standards were met (consent, confidentiality, protection from harm).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Milner’s study on HM?</div>
-            <div class="flashcard-back">As a case study, it’s hard to replicate, limiting generalizability. Some data was retrospective, lacking pre-accident cognitive baselines. Epilepsy medication may have contributed to brain damage, though this is less relevant since the focus is on the hippocampus’s role.</div>
-        </div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Psychology HL Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            display: none;
+            width: 100%;
+            max-width: 600px;
+        }
+        .section.active {
+            display: block;
+        }
+        .flashcard-container {
+            perspective: 1000px;
+            margin: 15px 0;
+        }
+        .flashcard {
+            position: relative;
+            width: 100%;
+            height: 150px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .flashcard-front {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .flashcard-back {
+            transform: rotateY(180deg);
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>IB Psychology HL Flashcards</h1>
+    <nav>
+        <a href="#hm" onclick="showSection('hm')">HM: Milner (1966)</a>
+        <a href="#maguire" onclick="showSection('maguire')">Maguire (2000)</a>
+        <a href="#draganski" onclick="showSection('draganski')">Draganski (2004)</a>
+        <a href="#loftus" onclick="showSection('loftus')">Loftus & Palmer (1974)</a>
+        <a href="#newcomer" onclick="showSection('newcomer')">Newcomer et al (1999)</a>
+        <a href="#wedekind" onclick="showSection('wedekind')">Wedekind et al (1995)</a>
+        <a href="#weissman" onclick="showSection('weissman')">Weissman et al (2005)</a>
+        <a href="#rosenzweig" onclick="showSection('rosenzweig')">Rosenzweig et al (1972)</a>
+        <a href="#bartlett" onclick="showSection('bartlett')">Bartlett (1932)</a>
+        <a href="#tversky" onclick="showSection('tversky')">Tversky & Kahneman (1974)</a>
+    </nav>
 
-<!-- Maguire (2000) Section -->
-<div id="maguire" class="section">
-    <h2>Maguire (2000)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Maguire’s (2000) study?</div>
-            <div class="flashcard-back">To investigate whether the brains of London taxi drivers differ due to their extensive navigation experience and knowledge of the city, specifically looking for changes in the hippocampus.</div>
+    <!-- HM: Milner (1966) Section -->
+    <div id="hm" class="section active">
+        <h2>HM: Milner (1966)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was HM's background and what led to his surgery?</div>
+                <div class="flashcard-back">HM was born in 1926 in Manchester, Connecticut. At age 7, he was hit by a cyclist, causing a head injury. Epileptic seizures started at age 10, likely due to the accident. By age 27, seizures were so severe that he couldn’t lead a normal life. Neurosurgeon William Scoville performed an experimental surgery, removing tissue from the medial temporal lobe, including the hippocampus, on both sides of HM’s brain.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Milner’s (1966) study on HM?</div>
+                <div class="flashcard-back">To investigate the effects of HM’s surgery (removal of the hippocampus and medial temporal lobe) on his memory and cognitive functions, particularly the role of the hippocampus in memory formation.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What research methods did Milner use to study HM?</div>
+                <div class="flashcard-back">Milner used method triangulation: psychometric testing (IQ tests), direct observation of behavior, interviews with HM and his family, cognitive testing (memory recall and learning tasks like reverse mirror drawing), and later MRI scans (by Corkin in 1992 and 2003) to assess brain damage.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key findings about HM’s memory after the surgery?</div>
+                <div class="flashcard-back">HM had severe anterograde amnesia (couldn’t form new episodic or semantic memories) and mild retrograde amnesia (lost about 1 year of memories before the surgery). He retained childhood memories, procedural memories (e.g., mowing a lawn), and working memory (e.g., recalling numbers with rehearsal). He could form cognitive maps (e.g., drawing his house layout) but couldn’t recall learning new skills like reverse mirror drawing.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does HM’s case study demonstrate localization of function in the brain?</div>
+                <div class="flashcard-back">HM’s case shows the hippocampus is critical for transferring short-term memories to long-term memory. Its removal caused anterograde amnesia, but short-term and procedural memories were intact, indicating these are stored elsewhere in the brain.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What brain study technique was used in HM’s case, and what did it reveal?</div>
+                <div class="flashcard-back">MRI scans (conducted by Corkin in 1992 and 2003) revealed damage to HM’s hippocampus and medial temporal lobe. This confirmed the hippocampus’s role in memory formation, as its damage explained HM’s inability to form new long-term memories.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does HM’s case study demonstrate research methods in the cognitive approach?</div>
+                <div class="flashcard-back">It’s a longitudinal case study using method triangulation (psychometric testing, interviews, observation, cognitive tasks). This allowed in-depth analysis of HM’s memory deficits over 50 years, providing rich qualitative and quantitative data.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does HM’s case evaluate the Multi-Store Model of memory?</div>
+                <div class="flashcard-back">HM’s case supports the Multi-Store Model by showing a distinction between short-term memory (intact, as he could hold conversations) and long-term memory (impaired, as he couldn’t form new memories). However, it challenges the model by showing procedural memory and cognitive maps were intact, suggesting long-term memory has multiple stores not accounted for in the model.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Milner’s study on HM?</div>
+                <div class="flashcard-back">Longitudinal design (over 50 years) allowed observation of changes over time. Method triangulation provided comprehensive data. High ecological validity, as HM was studied in his natural environment. Ethical standards were met (consent, confidentiality, protection from harm).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Milner’s study on HM?</div>
+                <div class="flashcard-back">As a case study, it’s hard to replicate, limiting generalizability. Some data was retrospective, lacking pre-accident cognitive baselines. Epilepsy medication may have contributed to brain damage, though this is less relevant since the focus is on the hippocampus’s role.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">Who were the participants in Maguire’s (2000) study?</div>
-            <div class="flashcard-back">16 right-handed male London taxi drivers who had completed the "Knowledge" test and held a license for at least 1.5 years, compared with MRI scans of 50 right-handed male non-taxi drivers from an MRI database, matched for age.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What methods did Maguire (2000) use to study the brain?</div>
-            <div class="flashcard-back">Used MRI scans analyzed with two techniques: voxel-based morphometry (VBM) to measure grey matter density, and pixel counting to calculate the hippocampal area. It was a single-blind, correlational study examining years of taxi driving and brain anatomy.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key findings of Maguire’s (2000) study?</div>
-            <div class="flashcard-back">Taxi drivers had larger posterior hippocampi and smaller anterior hippocampi compared to controls. The right posterior hippocampus volume correlated with years spent as a taxi driver. No differences were found in other brain areas.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Maguire (2000) demonstrate techniques for studying the brain?</div>
-            <div class="flashcard-back">Used MRI scans with voxel-based morphometry (VBM) to measure grey matter density and pixel counting to assess hippocampal size, showing how MRI can map brain structure changes related to behavior (navigation).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Maguire (2000) relate to neuroplasticity?</div>
-            <div class="flashcard-back">Shows that the hippocampus can change in response to environmental demands (navigation experience). The correlation between years of taxi driving and posterior hippocampus size suggests the brain adapts structurally to spatial demands.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Maguire (2000) demonstrate localization of function?</div>
-            <div class="flashcard-back">Indicates the posterior hippocampus is involved in using previously learned spatial information (navigation in taxi drivers), while the anterior hippocampus may be more involved in encoding new spatial layouts.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Maguire’s (2000) study?</div>
-            <div class="flashcard-back">Single-blind analysis reduced researcher bias. MRI has high ecological validity as participants weren’t tasked during scans. The correlation with years of driving supports neuroplasticity over innate differences. Ethically sound (consent, no health risks).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Maguire’s (2000) study?</div>
-            <div class="flashcard-back">Quasi-experiment, so no cause-and-effect can be established. Sampling bias (all male participants) limits generalizability. Cannot fully rule out that those with larger hippocampi are drawn to taxi driving, though correlation with experience counters this.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Draganski (2004) Section -->
-<div id="draganski" class="section">
-    <h2>Draganski (2004)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What is the background concept of neuroplasticity in Draganski (2004)?</div>
-            <div class="flashcard-back">Neuroplasticity is the brain’s ability to change its neural structures in response to the environment and cognition. It involves dendritic branching (via Long Term Potentiation, LTP) from repeated tasks, increasing neural density, and neural pruning when behaviors stop, reducing unused synaptic connections.</div>
+    <!-- Maguire (2000) Section -->
+    <div id="maguire" class="section">
+        <h2>Maguire (2000)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Maguire’s (2000) study?</div>
+                <div class="flashcard-back">To investigate whether the brains of London taxi drivers differ due to their extensive navigation experience and knowledge of the city, specifically looking for changes in the hippocampus.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Maguire’s (2000) study?</div>
+                <div class="flashcard-back">16 right-handed male London taxi drivers who had completed the "Knowledge" test and held a license for at least 1.5 years, compared with MRI scans of 50 right-handed male non-taxi drivers from an MRI database, matched for age.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What methods did Maguire (2000) use to study the brain?</div>
+                <div class="flashcard-back">Used MRI scans analyzed with two techniques: voxel-based morphometry (VBM) to measure grey matter density, and pixel counting to calculate the hippocampal area. It was a single-blind, correlational study examining years of taxi driving and brain anatomy.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key findings of Maguire’s (2000) study?</div>
+                <div class="flashcard-back">Taxi drivers had larger posterior hippocampi and smaller anterior hippocampi compared to controls. The right posterior hippocampus volume correlated with years spent as a taxi driver. No differences were found in other brain areas.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Maguire (2000) demonstrate techniques for studying the brain?</div>
+                <div class="flashcard-back">Used MRI scans with voxel-based morphometry (VBM) to measure grey matter density and pixel counting to assess hippocampal size, showing how MRI can map brain structure changes related to behavior (navigation).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Maguire (2000) relate to neuroplasticity?</div>
+                <div class="flashcard-back">Shows that the hippocampus can change in response to environmental demands (navigation experience). The correlation between years of taxi driving and posterior hippocampus size suggests the brain adapts structurally to spatial demands.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Maguire (2000) demonstrate localization of function?</div>
+                <div class="flashcard-back">Indicates the posterior hippocampus is involved in using previously learned spatial information (navigation in taxi drivers), while the anterior hippocampus may be more involved in encoding new spatial layouts.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Maguire’s (2000) study?</div>
+                <div class="flashcard-back">Single-blind analysis reduced researcher bias. MRI has high ecological validity as participants weren’t tasked during scans. The correlation with years of driving supports neuroplasticity over innate differences. Ethically sound (consent, no health risks).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Maguire’s (2000) study?</div>
+                <div class="flashcard-back">Quasi-experiment, so no cause-and-effect can be established. Sampling bias (all male participants) limits generalizability. Cannot fully rule out that those with larger hippocampi are drawn to taxi driving, though correlation with experience counters this.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Draganski’s (2004) study?</div>
-            <div class="flashcard-back">To investigate whether learning a new skill (juggling) would affect the brain’s structure, specifically looking for changes in grey matter density as evidence of neuroplasticity.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">Who were the participants in Draganski’s (2004) study?</div>
-            <div class="flashcard-back">24 volunteers aged 20–24 (21 females, 3 males), all non-jugglers at the start. They were divided into two groups: jugglers (taught to juggle) and non-jugglers (control group).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Draganski’s (2004) study?</div>
-            <div class="flashcard-back">All participants had an initial MRI scan. The juggling group was taught a three-ball cascade routine, practiced until mastered, then had a second MRI scan. They stopped juggling for three months and had a third MRI scan. The non-juggling group had MRIs at the same intervals. Voxel-based morphometry (VBM) analyzed grey matter density.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key findings of Draganski’s (2004) study?</div>
-            <div class="flashcard-back">After mastering juggling, the juggling group showed increased grey matter in the mid-temporal area (visual memory) of both hemispheres. Three months after stopping, grey matter decreased in these areas. The non-juggling group showed no changes throughout the study.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Draganski (2004) demonstrate neuroplasticity?</div>
-            <div class="flashcard-back">Shows that learning a skill (juggling) increases grey matter in the mid-temporal area (via LTP and dendritic branching), and stopping the skill leads to neural pruning, reducing grey matter, demonstrating the brain’s structural adaptability.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Draganski (2004) relate to the formation of synapses and neural pruning?</div>
-            <div class="flashcard-back">Juggling increased neural density via synapse formation (LTP and dendritic branching) in the mid-temporal area. Stopping juggling led to neural pruning, reducing grey matter as unused synaptic connections were eliminated.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What research methods does Draganski (2004) use to study the brain?</div>
-            <div class="flashcard-back">Experimental pre-test, post-test design with a control group. Used MRI scans and voxel-based morphometry (VBM) to measure changes in grey matter density over time, showing structural brain changes due to behavior.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Draganski’s (2004) study?</div>
-            <div class="flashcard-back">Experimental design with a control group supports cause-and-effect (juggling caused brain changes). Pre-test, post-test design tracks changes over time. VBM provides precise measurement of grey matter changes.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Draganski’s (2004) study?</div>
-            <div class="flashcard-back">Small sample size (24 participants) may reduce reliability of averages. Internal validity issues as participants practiced at home. Needs replication to confirm reliability. Gender imbalance (mostly female) may limit generalizability.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Loftus & Palmer (1974) Section -->
-<div id="loftus" class="section">
-    <h2>Loftus & Palmer (1974)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What concept did Loftus & Palmer (1974) investigate, and how does it relate to Bartlett (1932)?</div>
-            <div class="flashcard-back">Investigated reconstructive memory—how schemas influence memory. Bartlett (1932) showed cultural schemas distort memory by fitting experiences into existing knowledge. Loftus & Palmer tested how leading questions (post-event information) distort memory, like speed estimates in car accidents.</div>
+    <!-- Draganski (2004) Section -->
+    <div id="draganski" class="section">
+        <h2>Draganski (2004)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What is the background concept of neuroplasticity in Draganski (2004)?</div>
+                <div class="flashcard-back">Neuroplasticity is the brain’s ability to change its neural structures in response to the environment and cognition. It involves dendritic branching (via Long Term Potentiation, LTP) from repeated tasks, increasing neural density, and neural pruning when behaviors stop, reducing unused synaptic connections.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Draganski’s (2004) study?</div>
+                <div class="flashcard-back">To investigate whether learning a new skill (juggling) would affect the brain’s structure, specifically looking for changes in grey matter density as evidence of neuroplasticity.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Draganski’s (2004) study?</div>
+                <div class="flashcard-back">24 volunteers aged 20–24 (21 females, 3 males), all non-jugglers at the start. They were divided into two groups: jugglers (taught to juggle) and non-jugglers (control group).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Draganski’s (2004) study?</div>
+                <div class="flashcard-back">All participants had an initial MRI scan. The juggling group was taught a three-ball cascade routine, practiced until mastered, then had a second MRI scan. They stopped juggling for three months and had a third MRI scan. The non-juggling group had MRIs at the same intervals. Voxel-based morphometry (VBM) analyzed grey matter density.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key findings of Draganski’s (2004) study?</div>
+                <div class="flashcard-back">After mastering juggling, the juggling group showed increased grey matter in the mid-temporal area (visual memory) of both hemispheres. Three months after stopping, grey matter decreased in these areas. The non-juggling group showed no changes throughout the study.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Draganski (2004) demonstrate neuroplasticity?</div>
+                <div class="flashcard-back">Shows that learning a skill (juggling) increases grey matter in the mid-temporal area (via LTP and dendritic branching), and stopping the skill leads to neural pruning, reducing grey matter, demonstrating the brain’s structural adaptability.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Draganski (2004) relate to the formation of synapses and neural pruning?</div>
+                <div class="flashcard-back">Juggling increased neural density via synapse formation (LTP and dendritic branching) in the mid-temporal area. Stopping juggling led to neural pruning, reducing grey matter as unused synaptic connections were eliminated.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What research methods does Draganski (2004) use to study the brain?</div>
+                <div class="flashcard-back">Experimental pre-test, post-test design with a control group. Used MRI scans and voxel-based morphometry (VBM) to measure changes in grey matter density over time, showing structural brain changes due to behavior.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Draganski’s (2004) study?</div>
+                <div class="flashcard-back">Experimental design with a control group supports cause-and-effect (juggling caused brain changes). Pre-test, post-test design tracks changes over time. VBM provides precise measurement of grey matter changes.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Draganski’s (2004) study?</div>
+                <div class="flashcard-back">Small sample size (24 participants) may reduce reliability of averages. Internal validity issues as participants practiced at home. Needs replication to confirm reliability. Gender imbalance (mostly female) may limit generalizability.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Experiment 1 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">To investigate whether leading questions (using different verbs) affect the estimation of speed in a car accident viewed on film, testing the influence of wording on memory.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Experiment 1 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">45 students were divided into 5 groups (independent samples design). They watched 7 films of car accidents (5–30 seconds long). After each film, they gave an account of the accident and answered a questionnaire. The critical question varied: “About how fast were the cars going when they [smashed/collided/bumped/hit/contacted] each other?” Speed estimates were recorded.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the results of Experiment 1 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">Mean speed estimates varied by verb: “smashed” (40.8 mph), “collided” (39.3 mph), “bumped” (38.1 mph), “hit” (34.0 mph), “contacted” (31.8 mph). Results were significant (p ≤ 0.005), showing the verb influenced speed estimates, likely due to schema activation or response bias.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Experiment 2 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">To investigate if leading questions causing higher speed estimates (e.g., “smashed”) would lead participants to falsely recall broken glass in the accident, testing schema processing in reconstructive memory.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Experiment 2 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">150 students were randomly assigned to 3 groups. They watched a 1-minute film of a car accident (4 seconds of crash). Group 1 was asked, “How fast were the cars going when they smashed into each other?” Group 2 was asked the same with “hit.” Group 3 wasn’t asked about speed. One week later, all answered a questionnaire with the critical question: “Did you see any broken glass?” (There was none in the film.)</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the results of Experiment 2 in Loftus & Palmer (1974)?</div>
-            <div class="flashcard-back">“Smashed” group estimated higher speeds (10.46 mph) than “hit” group (8.00 mph). More in the “smashed” group (16) reported seeing broken glass compared to “hit” (7) and control (6). Chi-square test was significant (p ≤ 0.025), showing “smashed” led to more false memories of broken glass due to schema activation.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Loftus & Palmer (1974) demonstrate the reliability of cognitive processes?</div>
-            <div class="flashcard-back">Shows memory (reconstructive memory) is unreliable. Leading questions (e.g., “smashed” vs. “hit”) distort recall, as schemas activated by wording change memory (e.g., higher speed estimates, false recall of broken glass), highlighting memory’s susceptibility to post-event information.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What research methods does Loftus & Palmer (1974) use in the cognitive approach?</div>
-            <div class="flashcard-back">Lab experiments with controlled variables (IV: verb in question; DV: speed estimate, recall of broken glass). Independent samples design (Experiment 1) and random allocation (Experiment 2). Used statistical tests (p ≤ 0.005, p ≤ 0.025) to confirm significance, establishing cause-and-effect between leading questions and memory distortion.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Loftus & Palmer’s (1974) study?</div>
-            <div class="flashcard-back">Controlled lab experiment minimized confounding variables, establishing cause-and-effect (leading questions distort memory). Statistical significance (p ≤ 0.005, p ≤ 0.025) supports reliability of findings. Practical application to eyewitness testimony in court settings.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Loftus & Palmer’s (1974) study?</div>
-            <div class="flashcard-back">Low ecological validity—watching films lacks the emotional impact of real accidents, limiting generalizability. Student sample (young, inexperienced drivers) may not represent the general population. Artificial setting (lab) may not reflect real-life memory processes.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Newcomer et al (1999) Section -->
-<div id="newcomer" class="section">
-    <h2>Newcomer et al (1999)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Newcomer et al (1999)?</div>
-            <div class="flashcard-back">To investigate whether high levels of the stress hormone cortisol interfere with verbal declarative memory.</div>
+    <!-- Loftus & Palmer (1974) Section -->
+    <div id="loftus" class="section">
+        <h2>Loftus & Palmer (1974)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What concept did Loftus & Palmer (1974) investigate, and how does it relate to Bartlett (1932)?</div>
+                <div class="flashcard-back">Investigated reconstructive memory—how schemas influence memory. Bartlett (1932) showed cultural schemas distort memory by fitting experiences into existing knowledge. Loftus & Palmer tested how leading questions (post-event information) distort memory, like speed estimates in car accidents.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Experiment 1 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">To investigate whether leading questions (using different verbs) affect the estimation of speed in a car accident viewed on film, testing the influence of wording on memory.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Experiment 1 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">45 students were divided into 5 groups (independent samples design). They watched 7 films of car accidents (5–30 seconds long). After each film, they gave an account of the accident and answered a questionnaire. The critical question varied: “About how fast were the cars going when they [smashed/collided/bumped/hit/contacted] each other?” Speed estimates were recorded.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the results of Experiment 1 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">Mean speed estimates varied by verb: “smashed” (40.8 mph), “collided” (39.3 mph), “bumped” (38.1 mph), “hit” (34.0 mph), “contacted” (31.8 mph). Results were significant (p ≤ 0.005), showing the verb influenced speed estimates, likely due to schema activation or response bias.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Experiment 2 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">To investigate if leading questions causing higher speed estimates (e.g., “smashed”) would lead participants to falsely recall broken glass in the accident, testing schema processing in reconstructive memory.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Experiment 2 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">150 students were randomly assigned to 3 groups. They watched a 1-minute film of a car accident (4 seconds of crash). Group 1 was asked, “How fast were the cars going when they smashed into each other?” Group 2 was asked the same with “hit.” Group 3 wasn’t asked about speed. One week later, all answered a questionnaire with the critical question: “Did you see any broken glass?” (There was none in the film.)</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the results of Experiment 2 in Loftus & Palmer (1974)?</div>
+                <div class="flashcard-back">“Smashed” group estimated higher speeds (10.46 mph) than “hit” group (8.00 mph). More in the “smashed” group (16) reported seeing broken glass compared to “hit” (7) and control (6). Chi-square test was significant (p ≤ 0.025), showing “smashed” led to more false memories of broken glass due to schema activation.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Loftus & Palmer (1974) demonstrate the reliability of cognitive processes?</div>
+                <div class="flashcard-back">Shows memory (reconstructive memory) is unreliable. Leading questions (e.g., “smashed” vs. “hit”) distort recall, as schemas activated by wording change memory (e.g., higher speed estimates, false recall of broken glass), highlighting memory’s susceptibility to post-event information.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What research methods does Loftus & Palmer (1974) use in the cognitive approach?</div>
+                <div class="flashcard-back">Lab experiments with controlled variables (IV: verb in question; DV: speed estimate, recall of broken glass). Independent samples design (Experiment 1) and random allocation (Experiment 2). Used statistical tests (p ≤ 0.005, p ≤ 0.025) to confirm significance, establishing cause-and-effect between leading questions and memory distortion.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Loftus & Palmer’s (1974) study?</div>
+                <div class="flashcard-back">Controlled lab experiment minimized confounding variables, establishing cause-and-effect (leading questions distort memory). Statistical significance (p ≤ 0.005, p ≤ 0.025) supports reliability of findings. Practical application to eyewitness testimony in court settings.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Loftus & Palmer’s (1974) study?</div>
+                <div class="flashcard-back">Low ecological validity—watching films lacks the emotional impact of real accidents, limiting generalizability. Student sample (young, inexperienced drivers) may not represent the general population. Artificial setting (lab) may not reflect real-life memory processes.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">Who were the participants in Newcomer et al (1999)?</div>
-            <div class="flashcard-back">Employees or students at Washington University Medical Center, screened to exclude those who were pregnant, had a history of mental illness, head trauma, or corticosteroid-treated illnesses. Participants were matched for age and gender.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Newcomer et al (1999)?</div>
-            <div class="flashcard-back">A double-blind lab experiment with three conditions: high cortisol (160 mg/day, simulating major stress), low cortisol (40 mg/day, simulating minor stress), and placebo. Over 4 days, participants listened to and recalled a prose paragraph daily, with tests before, 1 day after, 4 days after, and 6 days after to check for long-term effects.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Newcomer et al (1999)?</div>
-            <div class="flashcard-back">High cortisol group showed the worst performance in verbal declarative memory, with impaired recall of prose. No difference between low dose and placebo groups. Effects were temporary; memory returned to normal after stopping cortisol. Low dose and placebo groups improved over time due to practice effects.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Newcomer et al (1999) relate to the function of hormones in human behavior?</div>
-            <div class="flashcard-back">Demonstrates that cortisol, a stress hormone, impairs verbal declarative memory (a behavior) at high levels, showing how hormones influence cognitive behavior under stress.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What research methods does Newcomer et al (1999) use in the biological approach?</div>
-            <div class="flashcard-back">Double-blind lab experiment with a control group (placebo). Used baseline testing to control for individual differences and counterbalanced prose texts to control for difficulty, establishing a causal link between cortisol and memory performance.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Newcomer et al (1999)?</div>
-            <div class="flashcard-back">Experimental design established cause-and-effect (cortisol impaired memory). Baseline testing controlled for individual differences. Counterbalancing prose texts controlled for difficulty. Double-blind method reduced bias.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Newcomer et al (1999)?</div>
-            <div class="flashcard-back">Limited control over extraneous variables (e.g., participants’ stressors) as they weren’t in the lab the whole time. Memorizing prose lacks ecological validity, limiting generalizability. Ethical concerns as cortisol temporarily impaired memory, though participants gave informed consent and effects were not permanent.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Wedekind et al (1995) Section -->
-<div id="wedekind" class="section">
-    <h2>Wedekind et al (1995)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the background concept of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">Evolutionary psychologists argue behaviors result from natural selection. The Major Histocompatibility Complex (MHC) genes, crucial for the immune system, are co-dominantly expressed. Diverse MHC genes in parents lead to stronger offspring immunity, so humans may have evolved to detect MHC differences via smell (pheromones) for mate selection.</div>
+    <!-- Newcomer et al (1999) Section -->
+    <div id="newcomer" class="section">
+        <h2>Newcomer et al (1999)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Newcomer et al (1999)?</div>
+                <div class="flashcard-back">To investigate whether high levels of the stress hormone cortisol interfere with verbal declarative memory.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Newcomer et al (1999)?</div>
+                <div class="flashcard-back">Employees or students at Washington University Medical Center, screened to exclude those who were pregnant, had a history of mental illness, head trauma, or corticosteroid-treated illnesses. Participants were matched for age and gender.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Newcomer et al (1999)?</div>
+                <div class="flashcard-back">A double-blind lab experiment with three conditions: high cortisol (160 mg/day, simulating major stress), low cortisol (40 mg/day, simulating minor stress), and placebo. Over 4 days, participants listened to and recalled a prose paragraph daily, with tests before, 1 day after, 4 days after, and 6 days after to check for long-term effects.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Newcomer et al (1999)?</div>
+                <div class="flashcard-back">High cortisol group showed the worst performance in verbal declarative memory, with impaired recall of prose. No difference between low dose and placebo groups. Effects were temporary; memory returned to normal after stopping cortisol. Low dose and placebo groups improved over time due to practice effects.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Newcomer et al (1999) relate to the function of hormones in human behavior?</div>
+                <div class="flashcard-back">Demonstrates that cortisol, a stress hormone, impairs verbal declarative memory (a behavior) at high levels, showing how hormones influence cognitive behavior under stress.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What research methods does Newcomer et al (1999) use in the biological approach?</div>
+                <div class="flashcard-back">Double-blind lab experiment with a control group (placebo). Used baseline testing to control for individual differences and counterbalanced prose texts to control for difficulty, establishing a causal link between cortisol and memory performance.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Newcomer et al (1999)?</div>
+                <div class="flashcard-back">Experimental design established cause-and-effect (cortisol impaired memory). Baseline testing controlled for individual differences. Counterbalancing prose texts controlled for difficulty. Double-blind method reduced bias.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Newcomer et al (1999)?</div>
+                <div class="flashcard-back">Limited control over extraneous variables (e.g., participants’ stressors) as they weren’t in the lab the whole time. Memorizing prose lacks ecological validity, limiting generalizability. Ethical concerns as cortisol temporarily impaired memory, though participants gave informed consent and effects were not permanent.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">To determine whether one's MHC affects mate choice, specifically if women prefer the scent of men with dissimilar MHC genes, supporting evolutionary mate selection.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">Who were the participants in Wedekind et al (1995)?</div>
-            <div class="flashcard-back">49 female and 44 male students from the University of Bern, Switzerland. Women were from biology and psychology courses, men from chemistry, physics, and geography. Participants were MHC-typed for diversity, and it was noted if women were on oral contraceptives.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">Men wore T-shirts for 2 nights, keeping them in open plastic bags during the day, using perfume-free detergent and soap, avoiding deodorants, alcohol, smoking, spicy foods, and sexual activity. Women, tested in the second week post-menstruation, ranked 7 T-shirts (3 MHC-similar, 3 MHC-dissimilar, 1 unworn control) for intensity, pleasantness, and sexiness. Women used nose spray for 14 days prior and read *Perfume* by Süskind to enhance smell sensitivity.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">Women rated MHC-dissimilar men’s T-shirts as more pleasant and sexier than MHC-similar ones. This preference reversed in women on oral contraceptives, suggesting MHC influences mate choice via pheromones, supporting evolutionary theory.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Wedekind et al (1995) relate to evolutionary explanations of behavior?</div>
-            <div class="flashcard-back">Supports evolutionary theory by showing women prefer mates with dissimilar MHC genes, likely to enhance offspring immunity, a trait selected for through natural selection in mate choice behavior.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Wedekind et al (1995) demonstrate the role of pheromones?</div>
-            <div class="flashcard-back">Shows pheromones (body odor linked to MHC) influence mate selection. Women’s preference for MHC-dissimilar scents suggests pheromones signal genetic compatibility, guiding reproductive behavior.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What research methods does Wedekind et al (1995) use in the biological approach?</div>
-            <div class="flashcard-back">Double-blind experiment minimized bias (neither participants nor researchers knew T-shirt MHC types). Controlled variables (e.g., no deodorants, specific timing for women) ensured focus on MHC effects on mate choice behavior.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">Double-blind design reduced demand characteristics. Replicated by Jacob et al (2002) and supported by animal studies (e.g., Yamazaki et al, 1976). Ethical (consent, debriefing). Supports evolutionary theory with real-world implications (e.g., miscarriage rates linked to MHC similarity).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Wedekind et al (1995)?</div>
-            <div class="flashcard-back">Sample (students, same age/culture) limits generalizability. Reductionist—focuses on MHC, ignoring cognitive/socio-cultural factors in mate choice. Oral contraceptive effects suggest hormonal influences may confound natural preferences.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Weissman et al (2005) Section -->
-<div id="weissman" class="section">
-    <h2>Weissman et al (2005)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are "kinship studies" as described in Weissman et al (2005)?</div>
-            <div class="flashcard-back">"Kinship studies" (termed family or pedigree studies) involve researching the incidence of a behavior, like Major Depressive Disorder, across generations (usually three) to explore potential genetic links.</div>
+    <!-- Wedekind et al (1995) Section -->
+    <div id="wedekind" class="section">
+        <h2>Wedekind et al (1995)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the background concept of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">Evolutionary psychologists argue behaviors result from natural selection. The Major Histocompatibility Complex (MHC) genes, crucial for the immune system, are co-dominantly expressed. Diverse MHC genes in parents lead to stronger offspring immunity, so humans may have evolved to detect MHC differences via smell (pheromones) for mate selection.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">To determine whether one's MHC affects mate choice, specifically if women prefer the scent of men with dissimilar MHC genes, supporting evolutionary mate selection.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Wedekind et al (1995)?</div>
+                <div class="flashcard-back">49 female and 44 male students from the University of Bern, Switzerland. Women were from biology and psychology courses, men from chemistry, physics, and geography. Participants were MHC-typed for diversity, and it was noted if women were on oral contraceptives.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">Men wore T-shirts for 2 nights, keeping them in open plastic bags during the day, using perfume-free detergent and soap, avoiding deodorants, alcohol, smoking, spicy foods, and sexual activity. Women, tested in the second week post-menstruation, ranked 7 T-shirts (3 MHC-similar, 3 MHC-dissimilar, 1 unworn control) for intensity, pleasantness, and sexiness. Women used nose spray for 14 days prior and read *Perfume* by Süskind to enhance smell sensitivity.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">Women rated MHC-dissimilar men’s T-shirts as more pleasant and sexier than MHC-similar ones. This preference reversed in women on oral contraceptives, suggesting MHC influences mate choice via pheromones, supporting evolutionary theory.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Wedekind et al (1995) relate to evolutionary explanations of behavior?</div>
+                <div class="flashcard-back">Supports evolutionary theory by showing women prefer mates with dissimilar MHC genes, likely to enhance offspring immunity, a trait selected for through natural selection in mate choice behavior.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Wedekind et al (1995) demonstrate the role of pheromones?</div>
+                <div class="flashcard-back">Shows pheromones (body odor linked to MHC) influence mate selection. Women’s preference for MHC-dissimilar scents suggests pheromones signal genetic compatibility, guiding reproductive behavior.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What research methods does Wedekind et al (1995) use in the biological approach?</div>
+                <div class="flashcard-back">Double-blind experiment minimized bias (neither participants nor researchers knew T-shirt MHC types). Controlled variables (e.g., no deodorants, specific timing for women) ensured focus on MHC effects on mate choice behavior.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">Double-blind design reduced demand characteristics. Replicated by Jacob et al (2002) and supported by animal studies (e.g., Yamazaki et al, 1976). Ethical (consent, debriefing). Supports evolutionary theory with real-world implications (e.g., miscarriage rates linked to MHC similarity).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Wedekind et al (1995)?</div>
+                <div class="flashcard-back">Sample (students, same age/culture) limits generalizability. Reductionist—focuses on MHC, ignoring cognitive/socio-cultural factors in mate choice. Oral contraceptive effects suggest hormonal influences may confound natural preferences.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Weissman et al (2005)?</div>
-            <div class="flashcard-back">To study the potential genetic nature of Major Depressive Disorder (MDD) by examining its incidence across three generations in families at high and low risk for depression.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">Who were the participants in Weissman et al (2005)?</div>
-            <div class="flashcard-back">161 grandchildren, their parents, and grandparents. Grandparents were originally selected from an outpatient clinic for mood disorders (depressed) or the same community (non-depressed). Parents and children were interviewed four times over 20 years.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Weissman et al (2005)?</div>
-            <div class="flashcard-back">A longitudinal family study over 20 years. Clinicians, blind to past diagnoses, interviewed participants four times. Children were evaluated by two clinicians (a child psychiatrist and a psychologist) for inter-rater reliability (0.82 for MDD, 0.65 for anxiety, 0.94 for alcohol dependency). Researcher triangulation ensured credibility.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Weissman et al (2005)?</div>
-            <div class="flashcard-back">Grandchildren with two generations of depression had high rates of psychiatric disorders (59.2% by age 12, often anxiety). Risk increased if both grandparents and parents had depression, and parental depression severity correlated with child mood disorders. No significant effect on grandchildren if only parents were depressed without grandparental history.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Weissman et al (2005) relate to "kinship studies" in the study of behavior?</div>
-            <div class="flashcard-back">Demonstrates how family studies ("kinship studies") identify genetic links to behavior by showing Major Depressive Disorder’s transmission across three generations, with higher rates in families with a history of depression in both parents and grandparents.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Weissman et al (2005)?</div>
-            <div class="flashcard-back">Longitudinal design increases data reliability. Researcher triangulation enhances credibility. Large sample (161 children) for a family study. High inter-rater reliability (e.g., 0.82 for MDD) ensures diagnostic consistency.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Weissman et al (2005)?</div>
-            <div class="flashcard-back">Time spent with healthy grandparents may be a confounding variable. No genotype was studied, so genetic links are inferred, not confirmed. More research needed to confirm reliability despite the large sample.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Rosenzweig, Bennet & Diamond (1972) Section -->
-<div id="rosenzweig" class="section">
-    <h2>Rosenzweig, Bennet & Diamond (1972)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Rosenzweig, Bennet & Diamond (1972)?</div>
-            <div class="flashcard-back">To investigate whether environmental factors (rich vs. impoverished environments) affect the development of neurons in the cerebral cortex, testing neuroplasticity in rats.</div>
+    <!-- Weissman et al (2005) Section -->
+    <div id="weissman" class="section">
+        <h2>Weissman et al (2005)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are "kinship studies" as described in Weissman et al (2005)?</div>
+                <div class="flashcard-back">"Kinship studies" (termed family or pedigree studies) involve researching the incidence of a behavior, like Major Depressive Disorder, across generations (usually three) to explore potential genetic links.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Weissman et al (2005)?</div>
+                <div class="flashcard-back">To study the potential genetic nature of Major Depressive Disorder (MDD) by examining its incidence across three generations in families at high and low risk for depression.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Weissman et al (2005)?</div>
+                <div class="flashcard-back">161 grandchildren, their parents, and grandparents. Grandparents were originally selected from an outpatient clinic for mood disorders (depressed) or the same community (non-depressed). Parents and children were interviewed four times over 20 years.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Weissman et al (2005)?</div>
+                <div class="flashcard-back">A longitudinal family study over 20 years. Clinicians, blind to past diagnoses, interviewed participants four times. Children were evaluated by two clinicians (a child psychiatrist and a psychologist) for inter-rater reliability (0.82 for MDD, 0.65 for anxiety, 0.94 for alcohol dependency). Researcher triangulation ensured credibility.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Weissman et al (2005)?</div>
+                <div class="flashcard-back">Grandchildren with two generations of depression had high rates of psychiatric disorders (59.2% by age 12, often anxiety). Risk increased if both grandparents and parents had depression, and parental depression severity correlated with child mood disorders. No significant effect on grandchildren if only parents were depressed without grandparental history.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Weissman et al (2005) relate to "kinship studies" in the study of behavior?</div>
+                <div class="flashcard-back">Demonstrates how family studies ("kinship studies") identify genetic links to behavior by showing Major Depressive Disorder’s transmission across three generations, with higher rates in families with a history of depression in both parents and grandparents.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Weissman et al (2005)?</div>
+                <div class="flashcard-back">Longitudinal design increases data reliability. Researcher triangulation enhances credibility. Large sample (161 children) for a family study. High inter-rater reliability (e.g., 0.82 for MDD) ensures diagnostic consistency.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Weissman et al (2005)?</div>
+                <div class="flashcard-back">Time spent with healthy grandparents may be a confounding variable. No genotype was studied, so genetic links are inferred, not confirmed. More research needed to confirm reliability despite the large sample.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Rosenzweig, Bennet & Diamond (1972)?</div>
-            <div class="flashcard-back">Three male rats from a common litter were randomly allocated to three conditions for 30–60 days: enriched condition (EC, 10–12 rats with toys/mazes), control condition (CC, 3 rats in a cage), and impoverished condition (IC, 1 rat in a cage without toys). All had food/water access. Rats were then killed to study brain anatomy changes.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Rosenzweig, Bennet & Diamond (1972)?</div>
-            <div class="flashcard-back">EC rats had increased thickness and weight of the cerebral cortex compared to IC rats. EC rats also showed greater activity of acetylcholine neurons, linked to learning and memory. A follow-up showed 30 minutes/day in an EC produced similar brain changes.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Rosenzweig, Bennet & Diamond (1972) demonstrate neuroplasticity?</div>
-            <div class="flashcard-back">Shows the brain changes due to experience—enriched environments increased cortex thickness and acetylcholine activity, while impoverished ones did not, proving the brain’s plasticity beyond childhood.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How and why are research methods used in Rosenzweig, Bennet & Diamond (1972) in the biological approach?</div>
-            <div class="flashcard-back">Used a controlled lab experiment with random allocation to conditions, isolating environmental variables (enrichment levels). This allowed a cause-and-effect relationship to be established between environment and brain changes, a key method in biological research for studying neuroplasticity.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Rosenzweig, Bennet & Diamond (1972) use animal models to understand human behavior and physiology?</div>
-            <div class="flashcard-back">Used rats to study neuroplasticity, assuming brain plasticity patterns are similar in rats and humans. Findings suggest human brains are also affected by environmental stimulation, relevant to cognitive development (e.g., poverty’s impact on children).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the ethical considerations in Rosenzweig, Bennet & Diamond (1972) for animal research?</div>
-            <div class="flashcard-back">Ethical concerns include undue stress (IC rats isolated in impoverished environments) and harm (rats were killed). A cost-benefit analysis must justify the study’s goals (understanding neuroplasticity) against the harm to animals.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Rosenzweig, Bennet & Diamond (1972)?</div>
-            <div class="flashcard-back">Controlled lab experiment established cause-and-effect. Results replicated many times, increasing reliability. Findings have human implications (e.g., environmental stimulation’s role in cognitive development). A follow-up confirmed shorter EC exposure still produced brain changes.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Rosenzweig, Bennet & Diamond (1972)?</div>
-            <div class="flashcard-back">Unclear if EC effects were due to toys, social interaction, or exercise—single rats in EC with toys showed no changes unless stimulated. Animal study, so generalizability to humans requires further research. Confounding variables (e.g., exercise vs. stimulation) not fully isolated.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Bartlett (1932) Section -->
-<div id="bartlett" class="section">
-    <h2>Bartlett (1932)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Bartlett (1932)?</div>
-            <div class="flashcard-back">To investigate how memory of a story is affected by prior knowledge, testing if cultural background and unfamiliarity with a text lead to memory distortion through cultural schemas.</div>
+    <!-- Rosenzweig, Bennet & Diamond (1972) Section -->
+    <div id="rosenzweig" class="section">
+        <h2>Rosenzweig, Bennet & Diamond (1972)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Rosenzweig, Bennet & Diamond (1972)?</div>
+                <div class="flashcard-back">To investigate whether environmental factors (rich vs. impoverished environments) affect the development of neurons in the cerebral cortex, testing neuroplasticity in rats.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Rosenzweig, Bennet & Diamond (1972)?</div>
+                <div class="flashcard-back">Three male rats from a common litter were randomly allocated to three conditions for 30–60 days: enriched condition (EC, 10–12 rats with toys/mazes), control condition (CC, 3 rats in a cage), and impoverished condition (IC, 1 rat in a cage without toys). All had food/water access. Rats were then killed to study brain anatomy changes.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Rosenzweig, Bennet & Diamond (1972)?</div>
+                <div class="flashcard-back">EC rats had increased thickness and weight of the cerebral cortex compared to IC rats. EC rats also showed greater activity of acetylcholine neurons, linked to learning and memory. A follow-up showed 30 minutes/day in an EC produced similar brain changes.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Rosenzweig, Bennet & Diamond (1972) demonstrate neuroplasticity?</div>
+                <div class="flashcard-back">Shows the brain changes due to experience—enriched environments increased cortex thickness and acetylcholine activity, while impoverished ones did not, proving the brain’s plasticity beyond childhood.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How and why are research methods used in Rosenzweig, Bennet & Diamond (1972) in the biological approach?</div>
+                <div class="flashcard-back">Used a controlled lab experiment with random allocation to conditions, isolating environmental variables (enrichment levels). This allowed a cause-and-effect relationship to be established between environment and brain changes, a key method in biological research for studying neuroplasticity.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Rosenzweig, Bennet & Diamond (1972) use animal models to understand human behavior and physiology?</div>
+                <div class="flashcard-back">Used rats to study neuroplasticity, assuming brain plasticity patterns are similar in rats and humans. Findings suggest human brains are also affected by environmental stimulation, relevant to cognitive development (e.g., poverty’s impact on children).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the ethical considerations in Rosenzweig, Bennet & Diamond (1972) for animal research?</div>
+                <div class="flashcard-back">Ethical concerns include undue stress (IC rats isolated in impoverished environments) and harm (rats were killed). A cost-benefit analysis must justify the study’s goals (understanding neuroplasticity) against the harm to animals.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Rosenzweig, Bennet & Diamond (1972)?</div>
+                <div class="flashcard-back">Controlled lab experiment established cause-and-effect. Results replicated many times, increasing reliability. Findings have human implications (e.g., environmental stimulation’s role in cognitive development). A follow-up confirmed shorter EC exposure still produced brain changes.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Rosenzweig, Bennet & Diamond (1972)?</div>
+                <div class="flashcard-back">Unclear if EC effects were due to toys, social interaction, or exercise—single rats in EC with toys showed no changes unless stimulated. Animal study, so generalizability to humans requires further research. Confounding variables (e.g., exercise vs. stimulation) not fully isolated.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Bartlett (1932)?</div>
-            <div class="flashcard-back">British participants were told a Native American story, *The War of the Ghosts*, which was unfamiliar to them. They were split into two conditions: repeated reproduction (recall the story multiple times over days/weeks/months/years) or serial reproduction (recall and retell the story to another person).</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Bartlett (1932)?</div>
-            <div class="flashcard-back">No significant difference between the two conditions. Participants distorted the story through: assimilation (details changed to fit British cultural norms), leveling (story shortened, omitting unfamiliar details), and sharpening (order changed, familiar terms/emotions added). Main themes were recalled, but unfamiliar elements were altered to fit cultural expectations.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Bartlett (1932) evaluate schema theory?</div>
-            <div class="flashcard-back">Supports schema theory by showing memory is reconstructive—participants used cultural schemas to interpret and recall the story, altering unfamiliar elements to fit their British cultural expectations, demonstrating schemas’ role in memory processing.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">To what extent does Bartlett (1932) show the reliability of one cognitive process?</div>
-            <div class="flashcard-back">Shows memory is unreliable due to reconstructive nature. Participants distorted *The War of the Ghosts* to fit cultural schemas, changing details, order, and adding emotions, indicating memory is an active process prone to bias rather than a faithful record.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Bartlett (1932) show sociocultural factors affecting cognitive processes?</div>
-            <div class="flashcard-back">Demonstrates that cultural background (sociocultural factor) affects memory (cognitive process). British participants altered the Native American story to align with their cultural schemas, showing culture influences how memory is reconstructed.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Bartlett (1932)?</div>
-            <div class="flashcard-back">High ecological validity—explains real-life memory distortions (e.g., cultural influences on recall). Introduced reconstructive memory theory, widely applicable. Highlights active nature of memory and role of schemas in meaning-making.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Bartlett (1932)?</div>
-            <div class="flashcard-back">Lacked rigorous control—non-standardized instructions and recall timing. No control group (e.g., Native Americans recalling the story) to confirm cultural distortion. Quasi-experimental (culture as IV), so no cause-and-effect established. IV (repeated vs. serial reproduction) had no effect on DV.</div>
-        </div>
-    </div>
-</div>
 
-<!-- Tversky and Kahneman (1974) Section -->
-<div id="tversky" class="section">
-    <h2>Tversky and Kahneman (1974)</h2>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What is the background concept of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">Anchoring bias, a cognitive bias, is the tendency to rely heavily on the first piece of information (the "anchor") when making decisions. It occurs due to heuristics in System 1 thinking (quick, intuitive), often because of cognitive load, ego depletion, or being cognitive misers, leading to systematic errors in judgment.</div>
+    <!-- Bartlett (1932) Section -->
+    <div id="bartlett" class="section">
+        <h2>Bartlett (1932)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Bartlett (1932)?</div>
+                <div class="flashcard-back">To investigate how memory of a story is affected by prior knowledge, testing if cultural background and unfamiliarity with a text lead to memory distortion through cultural schemas.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Bartlett (1932)?</div>
+                <div class="flashcard-back">British participants were told a Native American story, *The War of the Ghosts*, which was unfamiliar to them. They were split into two conditions: repeated reproduction (recall the story multiple times over days/weeks/months/years) or serial reproduction (recall and retell the story to another person).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Bartlett (1932)?</div>
+                <div class="flashcard-back">No significant difference between the two conditions. Participants distorted the story through: assimilation (details changed to fit British cultural norms), leveling (story shortened, omitting unfamiliar details), and sharpening (order changed, familiar terms/emotions added). Main themes were recalled, but unfamiliar elements were altered to fit cultural expectations.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Bartlett (1932) evaluate schema theory?</div>
+                <div class="flashcard-back">Supports schema theory by showing memory is reconstructive—participants used cultural schemas to interpret and recall the story, altering unfamiliar elements to fit their British cultural expectations, demonstrating schemas’ role in memory processing.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">To what extent does Bartlett (1932) show the reliability of one cognitive process?</div>
+                <div class="flashcard-back">Shows memory is unreliable due to reconstructive nature. Participants distorted *The War of the Ghosts* to fit cultural schemas, changing details, order, and adding emotions, indicating memory is an active process prone to bias rather than a faithful record.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Bartlett (1932) show sociocultural factors affecting cognitive processes?</div>
+                <div class="flashcard-back">Demonstrates that cultural background (sociocultural factor) affects memory (cognitive process). British participants altered the Native American story to align with their cultural schemas, showing culture influences how memory is reconstructed.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Bartlett (1932)?</div>
+                <div class="flashcard-back">High ecological validity—explains real-life memory distortions (e.g., cultural influences on recall). Introduced reconstructive memory theory, widely applicable. Highlights active nature of memory and role of schemas in meaning-making.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Bartlett (1932)?</div>
+                <div class="flashcard-back">Lacked rigorous control—non-standardized instructions and recall timing. No control group (e.g., Native Americans recalling the story) to confirm cultural distortion. Quasi-experimental (culture as IV), so no cause-and-effect established. IV (repeated vs. serial reproduction) had no effect on DV.</div>
+            </div>
         </div>
     </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the aim of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">To investigate the effect of anchoring bias on numerical estimation, specifically whether the starting number in a sequence (ascending or descending) influences the estimated value of a multiplication problem.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What was the procedure of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">High school students were split into two groups. The ascending condition group estimated 1 × 2 × 3 × 4 × 5 × 6 × 7 × 8 in 5 seconds. The descending condition group estimated 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 in 5 seconds. The hypothesis was that the first number (1 or 8) would anchor their estimates.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What were the key results of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">The median estimate for the ascending group (starting with 1) was 512, while the descending group (starting with 8) was 2250. The actual value is 40320, showing both groups underestimated, but the descending group’s estimate was significantly higher due to the anchor effect.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">How does Tversky and Kahneman (1974) show the reliability of cognitive processes?</div>
-            <div class="flashcard-back">Demonstrates decision-making (a cognitive process) is unreliable due to anchoring bias. Participants’ estimates were heavily influenced by the first number (1 or 8), showing heuristics lead to systematic errors in judgment rather than accurate reasoning.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the strengths of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">Simple, replicable experiment with high internal validity—controlled conditions allowed a causal link between anchor and estimate. Use of median reduced outlier influence. Supported by other studies (e.g., Plassman et al, 2008) showing anchoring in real-world contexts.</div>
-        </div>
-    </div>
-    <div class="flashcard-container">
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-front">What are the limitations of Tversky and Kahneman (1974)?</div>
-            <div class="flashcard-back">Low ecological validity—estimating a math problem in 5 seconds is artificial, limiting real-world applicability. Independent samples design may introduce participant variability (e.g., math skills). A matched pairs design would better control for this.</div>
-        </div>
-    </div>
-</div>
 
-<script>
-    function showSection(sectionId) {
-        document.querySelectorAll('.section').forEach(section => {
-            section.classList.remove('active');
-        });
-        document.getElementById(sectionId).classList.add('active');
-    }
+    <!-- Tversky and Kahneman (1974) Section -->
+    <div id="tversky" class="section">
+        <h2>Tversky and Kahneman (1974)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What is the background concept of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">Anchoring bias, a cognitive bias, is the tendency to rely heavily on the first piece of information (the "anchor") when making decisions. It occurs due to heuristics in System 1 thinking (quick, intuitive), often because of cognitive load, ego depletion, or being cognitive misers, leading to systematic errors in judgment.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">To investigate the effect of anchoring bias on numerical estimation, specifically whether the starting number in a sequence (ascending or descending) influences the estimated value of a multiplication problem.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">High school students were split into two groups. The ascending condition group estimated 1 × 2 × 3 × 4 × 5 × 6 × 7 × 8 in 5 seconds. The descending condition group estimated 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 in 5 seconds. The hypothesis was that the first number (1 or 8) would anchor their estimates.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What were the key results of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">The median estimate for the ascending group (starting with 1) was 512, while the descending group (starting with 8) was 2250. The actual value is 40320, showing both groups underestimated, but the descending group’s estimate was significantly higher due to the anchor effect.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Tversky and Kahneman (1974) show the reliability of cognitive processes?</div>
+                <div class="flashcard-back">Demonstrates decision-making (a cognitive process) is unreliable due to anchoring bias. Participants’ estimates were heavily influenced by the first number (1 or 8), showing heuristics lead to systematic errors in judgment rather than accurate reasoning.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the strengths of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">Simple, replicable experiment with high internal validity—controlled conditions allowed a causal link between anchor and estimate. Use of median reduced outlier influence. Supported by other studies (e.g., Plassman et al, 2008) showing anchoring in real-world contexts.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of Tversky and Kahneman (1974)?</div>
+                <div class="flashcard-back">Low ecological validity—estimating a math problem in 5 seconds is artificial, limiting real-world applicability. Independent samples design may introduce participant variability (e.g., math skills). A matched pairs design would better control for this.</div>
+            </div>
+        </div>
+    </div>
 
-    // Show the first section by default
-    showSection('hm');
-</script>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Show the first section by default
+        showSection('hm');
+    </script>
 </body>
 </html>
