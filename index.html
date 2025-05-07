@@ -49,7 +49,7 @@
         .flashcard {
             position: relative;
             width: 100%;
-            height: 150px;
+            height: 150px; /* Increased height slightly to accommodate more text */
             transform-style: preserve-3d;
             transition: transform 0.6s;
             cursor: pointer;
@@ -72,6 +72,7 @@
             background-color: white;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            overflow-y: auto; /* Add scroll for longer text */
         }
         .flashcard-front {
             color: #2c3e50;
@@ -81,6 +82,30 @@
             transform: rotateY(180deg);
             color: #555;
         }
+
+        /* Add scrollbar styles for better readability of long answers */
+        .flashcard-front::-webkit-scrollbar,
+        .flashcard-back::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .flashcard-front::-webkit-scrollbar-track,
+        .flashcard-back::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+        }
+
+        .flashcard-front::-webkit-scrollbar-thumb,
+        .flashcard-back::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 10px;
+        }
+
+        .flashcard-front::-webkit-scrollbar-thumb:hover,
+        .flashcard-back::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+
     </style>
 </head>
 <body>
@@ -96,8 +121,11 @@
         <a href="#rosenzweig" onclick="showSection('rosenzweig')">Rosenzweig et al (1972)</a>
         <a href="#bartlett" onclick="showSection('bartlett')">Bartlett (1932)</a>
         <a href="#tversky" onclick="showSection('tversky')">Tversky & Kahneman (1974)</a>
+        <!-- New link for Sharot et al (2007) -->
+        <a href="#sharot" onclick="showSection('sharot')">Sharot et al (2007)</a>
     </nav>
 
+    <!-- Existing Sections (HM to Tversky & Kahneman) -->
     <!-- HM: Milner (1966) Section -->
     <div id="hm" class="section active">
         <h2>HM: Milner (1966)</h2>
@@ -113,7 +141,7 @@
                 <div class="flashcard-back">To investigate the effects of HM’s surgery (removal of the hippocampus and medial temporal lobe) on his memory and cognitive functions, particularly the role of the hippocampus in memory formation.</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">What research methods did Milner use to study HM?</div>
                 <div class="flashcard-back">Milner used method triangulation: psychometric testing (IQ tests), direct observation of behavior, interviews with HM and his family, cognitive testing (memory recall and learning tasks like reverse mirror drawing), and later MRI scans (by Corkin in 1992 and 2003) to assess brain damage.</div>
@@ -159,7 +187,7 @@
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">What are the limitations of Milner’s study on HM?</div>
                 <div class="flashcard-back">As a case study, it’s hard to replicate, limiting generalizability. Some data was retrospective, lacking pre-accident cognitive baselines. Epilepsy medication may have contributed to brain damage, though this is less relevant since the focus is on the hippocampus’s role.</div>
-            </div>
+            <d/iv>
         </div>
     </div>
 
@@ -243,7 +271,7 @@
                 <div class="flashcard-back">24 volunteers aged 20–24 (21 females, 3 males), all non-jugglers at the start. They were divided into two groups: jugglers (taught to juggle) and non-jugglers (control group).</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">What was the procedure of Draganski’s (2004) study?</div>
                 <div class="flashcard-back">All participants had an initial MRI scan. The juggling group was taught a three-ball cascade routine, practiced until mastered, then had a second MRI scan. They stopped juggling for three months and had a third MRI scan. The non-juggling group had MRIs at the same intervals. Voxel-based morphometry (VBM) analyzed grey matter density.</div>
@@ -397,7 +425,7 @@
                 <div class="flashcard-back">Double-blind lab experiment with a control group (placebo). Used baseline testing to control for individual differences and counterbalanced prose texts to control for difficulty, establishing a causal link between cortisol and memory performance.</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">What are the strengths of Newcomer et al (1999)?</div>
                 <div class="flashcard-back">Experimental design established cause-and-effect (cortisol impaired memory). Baseline testing controlled for individual differences. Counterbalancing prose texts controlled for difficulty. Double-blind method reduced bias.</div>
@@ -444,7 +472,7 @@
                 <div class="flashcard-back">Women rated MHC-dissimilar men’s T-shirts as more pleasant and sexier than MHC-similar ones. This preference reversed in women on oral contraceptives, suggesting MHC influences mate choice via pheromones, supporting evolutionary theory.</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">How does Wedekind et al (1995) relate to evolutionary explanations of behavior?</div>
                 <div class="flashcard-back">Supports evolutionary theory by showing women prefer mates with dissimilar MHC genes, likely to enhance offspring immunity, a trait selected for through natural selection in mate choice behavior.</div>
@@ -562,7 +590,7 @@
                 <div class="flashcard-back">Used a controlled lab experiment with random allocation to conditions, isolating environmental variables (enrichment levels). This allowed a cause-and-effect relationship to be established between environment and brain changes, a key method in biological research for studying neuroplasticity.</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">How does Rosenzweig, Bennet & Diamond (1972) use animal models to understand human behavior and physiology?</div>
                 <div class="flashcard-back">Used rats to study neuroplasticity, assuming brain plasticity patterns are similar in rats and humans. Findings suggest human brains are also affected by environmental stimulation, relevant to cognitive development (e.g., poverty’s impact on children).</div>
@@ -656,7 +684,7 @@
                 <div class="flashcard-back">To investigate the effect of anchoring bias on numerical estimation, specifically whether the starting number in a sequence (ascending or descending) influences the estimated value of a multiplication problem.</div>
             </div>
         </div>
-        <div class="flashcard-container">
+        <div classcard-container">
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-front">What was the procedure of Tversky and Kahneman (1974)?</div>
                 <div class="flashcard-back">High school students were split into two groups. The ascending condition group estimated 1 × 2 × 3 × 4 × 5 × 6 × 7 × 8 in 5 seconds. The descending condition group estimated 8 × 7 × 6 × 5 × 4 × 3 × 2 × 1 in 5 seconds. The hypothesis was that the first number (1 or 8) would anchor their estimates.</div>
@@ -688,10 +716,104 @@
         </div>
     </div>
 
+    <!-- Sharot et al (2007) Section -->
+    <div id="sharot" class="section">
+        <h2>Sharot et al (2007)</h2>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the aim of Sharot et al (2007)?</div>
+                <div class="flashcard-back">To determine the potential role of biological factors on flashbulb memories.</div>
+            </div>
+        </div>
+         <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">Who were the participants in Sharot et al (2007)?</div>
+                <div class="flashcard-back">24 participants who were in New York City on the day of the 9/11 terrorist attacks, recruited through advertisements, provided informed consent, and were compensated.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What biological technique was used in Sharot et al (2007) and why?</div>
+                <div class="flashcard-back">fMRI scans were used to measure participants' brain activity (specifically in the amygdala) while they recalled memories. This technique allows researchers to observe the biological basis (brain activation patterns) correlated with a cognitive process (memory retrieval).</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the procedure for participants in Sharot et al (2007)?</div>
+                <div class="flashcard-back">Participants were placed in an fMRI scanner and presented with word cues on a screen. Each cue word was paired with "Summer" or "September" to prompt recall of either personal summer memories (baseline) or 9/11 memories. Their brain activity was recorded during recall. After the scan, they rated their memories for vividness, detail, confidence, and arousal, and wrote descriptions.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How did Sharot et al (2007) distinguish between those with and without flashbulb memories?</div>
+                <div class="flashcard-back">After the fMRI, participants rated their memories for vividness, detail, confidence in accuracy, and arousal. Those who reported a greater sense of detail and strong confidence in accuracy for their 9/11 memories were considered to have "flashbulb memories" of the event.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What was the relationship between participant location and flashbulb memories in Sharot et al (2007)?</div>
+                <div class="flashcard-back">Participants who were physically closer to the World Trade Centre on 9/11 were more likely to report having flashbulb memories (greater detail and confidence) and included more specific details in their written accounts compared to those who were further away.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What did fMRI results show about amygdala activation in Sharot et al (2007)?</div>
+                <div class="flashcard-back">Participants who were *downtown* (closer to the WTC) showed significantly *higher* amygdala activation when recalling 9/11 memories compared to their personal summer memories. Participants who were *further away* showed similar levels of amygdala activation for both 9/11 and summer memories.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What correlation was found between amygdala activation and memory in Sharot et al (2007)?</div>
+                <div class="flashcard-back">The strength of amygdala activation observed during the retrieval of 9/11 memories was positively correlated with the participants' subjective ratings of the vividness, detail, and confidence in the accuracy of those flashbulb memories.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Sharot et al (2007) relate to localization of function?</div>
+                <div class="flashcard-back">The study provides evidence for the localization of function by suggesting that the amygdala is a key brain structure involved in the formation and vividness of emotionally charged memories, such as flashbulb memories, highlighting its specific role in linking emotion to memory storage and retrieval.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">How does Sharot et al (2007) demonstrate how emotion affects a cognitive process?</div>
+                <div class="flashcard-back">The study suggests that strong emotional arousal triggered by a significant event (like 9/11, particularly for those closer to the attacks) activates the amygdala, which in turn appears to strengthen the vividness and detail of memory (a cognitive process), supporting the theory that emotion influences memory formation and recall.</div>
+            </div>
+        </div>
+         <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What is a key limitation regarding cause-and-effect in Sharot et al (2007)?</div>
+                <div class="flashcard-back">The study is correlational. It shows a relationship between amygdala activation, proximity to the event, and flashbulb memory characteristics, but it cannot definitively state that the amygdala activity *caused* the increased vividness or confidence of the memory.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What is a limitation regarding the research method's ecological validity in Sharot et al (2007)?</div>
+                <div class="flashcard-back">Recalling memories inside an fMRI scanner while looking at word cues is an artificial task that doesn't reflect how memories are typically recalled in real life, which lowers the ecological validity of the study.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What does Sharot et al (2007) fail to explain regarding flashbulb memories?</div>
+                <div class="flashcard-back">The study focuses on personal proximity and amygdala activation, but it doesn't explain why many people who witnessed the 9/11 events *only* through media (TV, internet) still report having vivid flashbulb memories, despite lacking personal proximity.</div>
+            </div>
+        </div>
+        <div class="flashcard-container">
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-front">What are the limitations of the sample in Sharot et al (2007)?</div>
+                <div class="flashcard-back">The sample size is small (24 participants) and culturally specific (New Yorkers). Research suggests cultural background can influence the reporting of flashbulb memories, limiting the generalizability of these findings to other populations or cultures.</div>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
+                // Optional: Reset flipped cards when changing sections
+                section.querySelectorAll('.flashcard').forEach(card => {
+                    card.classList.remove('flipped');
+                });
             });
             document.getElementById(sectionId).classList.add('active');
         }
