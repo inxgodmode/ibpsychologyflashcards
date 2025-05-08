@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IB Psychology MCQ Quizzes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    details {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    summary {
+      padding: 15px;
+      font-weight: bold;
+      background-color: #2563eb;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px 5px 0 0;
+    }
+    summary:hover {
+      background-color: #1d4ed8;
+    }
+    .quiz-content {
+      padding: 15px;
+    }
+    .question {
+      margin-bottom: 15px;
+    }
+    .question p {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    label:hover {
+      background-color: #eef2ff;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .submit-btn {
+      background-color: #16a34a;
+      color: #fff;
+    }
+    .submit-btn:disabled {
+      background-color: #9ca3af;
+      cursor: not-allowed;
+    }
+    .submit-btn:hover:not(:disabled) {
+      background-color: #15803d;
+    }
+    .reset-btn {
+      background-color: #dc2626;
+      color: #fff;
+    }
+    .reset-btn:hover {
+      background-color: #b91c1c;
+    }
+    .results {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f3f4f6;
+      border-radius: 5px;
+      display: none;
+    }
+    .results.show {
+      display: block;
+    }
+    .results p {
+      margin: 8px 0;
+    }
+    .correct-answer-text {
+        color: #16a34a; /* Green for correct answer text */
+        font-weight: bold;
+    }
+    .user-answer-text {
+        /* Style for user's answer text if needed, e.g., if it was incorrect */
+    }
+    .feedback-icon.correct {
+      color: #16a34a;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    .feedback-icon.incorrect {
+      color: #dc2626;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    .error {
+      color: #dc2626;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>IB Psychology MCQ Quizzes</h1>
+    <div id="quizzes">
+      <details>
+        <summary>HM: Milner (1966)</summary>
+        <div class="quiz-content" data-study="0">
+          <div class="question">
+            <p>1. What was the primary reason for HM’s brain surgery?</p>
+            <label><input type="radio" name="q0-0" value="0"> To treat depression</label>
+            <label><input type="radio" name="q0-0" value="1"> To remove a tumor</label>
+            <label><input type="radio" name="q0-0" value="2"> To control seizures</label>
+            <label><input type="radio" name="q0-0" value="3"> To improve cognition</label>
+          </div>
+          <div class="question">
+            <p>2. Which part of HM’s brain was removed during surgery?</p>
+            <label><input type="radio" name="q0-1" value="0"> Frontal lobe</label>
+            <label><input type="radio" name="q0-1" value="1"> Hippocampus</label>
+            <label><input type="radio" name="q0-1" value="2"> Cerebellum</label>
+            <label><input type="radio" name="q0-1" value="3"> Amygdala</label>
+          </div>
+          <div class="question">
+            <p>3. What type of amnesia did HM develop after surgery?</p>
+            <label><input type="radio" name="q0-2" value="0"> Retrograde amnesia</label>
+            <label><input type="radio" name="q0-2" value="1"> Anterograde amnesia</label>
+            <label><input type="radio" name="q0-2" value="2"> Global amnesia</label>
+            <label><input type="radio" name="q0-2" value="3"> Transient amnesia</label>
+          </div>
+          <div class="question">
+            <p>4. Which type of memory was HM unable to form after surgery?</p>
+            <label><input type="radio" name="q0-3" value="0"> Procedural memory</label>
+            <label><input type="radio" name="q0-3" value="1"> Short-term memory</label>
+            <label><input type="radio" name="q0-3" value="2"> Declarative memory</label>
+            <label><input type="radio" name="q0-3" value="3"> Sensory memory</label>
+          </div>
+          <div class="question">
+            <p>5. Which type of memory remained preserved in HM after surgery?</p>
+            <label><input type="radio" name="q0-4" value="0"> Episodic memory</label>
+            <label><input type="radio" name="q0-4" value="1"> Semantic memory</label>
+            <label><input type="radio" name="q0-4" value="2"> Procedural memory</label>
+            <label><input type="radio" name="q0-4" value="3"> Autobiographical memory</label>
+          </div>
+          <div class="question">
+            <p>6. What role of the hippocampus was suggested by HM’s case?</p>
+            <label><input type="radio" name="q0-5" value="0"> Motor coordination</label>
+            <label><input type="radio" name="q0-5" value="1"> Declarative memory formation</label>
+            <label><input type="radio" name="q0-5" value="2"> Emotion regulation</label>
+            <label><input type="radio" name="q0-5" value="3"> Sensory processing</label>
+          </div>
+          <div class="question">
+            <p>7. How was HM’s short-term memory affected post-surgery?</p>
+            <label><input type="radio" name="q0-6" value="0"> Severely impaired</label>
+            <label><input type="radio" name="q0-6" value="1"> Largely intact</label>
+            <label><input type="radio" name="q0-6" value="2"> Partially impaired</label>
+            <label><input type="radio" name="q0-6" value="3"> Improved</label>
+          </div>
+          <div class="question">
+            <p>8. What method did Milner primarily use to study HM’s memory?</p>
+            <label><input type="radio" name="q0-7" value="0"> Neuroimaging</label>
+            <label><input type="radio" name="q0-7" value="1"> Behavioral tasks</label>
+            <label><input type="radio" name="q0-7" value="2"> Blood tests</label>
+            <label><input type="radio" name="q0-7" value="3"> Genetic analysis</label>
+          </div>
+          <div class="question">
+            <p>9. What was a key ethical concern in HM’s case study?</p>
+            <label><input type="radio" name="q0-8" value="0"> Lack of informed consent</label>
+            <label><input type="radio" name="q0-8" value="1"> Use of invasive implants</label>
+            <label><input type="radio" name="q0-8" value="2"> Exposure to radiation</label>
+            <label><input type="radio" name="q0-8" value="3"> Forced participation</label>
+          </div>
+          <div class="question">
+            <p>10. What was a major impact of HM’s case on neuroscience?</p>
+            <label><input type="radio" name="q0-9" value="0"> Discovery of mirror neurons</label>
+            <label><input type="radio" name="q0-9" value="1"> Evidence for brain specialization</label>
+            <label><input type="radio" name="q0-9" value="2"> Disproof of brain’s role in memory</label>
+            <label><input type="radio" name="q0-9" value="3"> Support for multiple intelligences</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(0)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(0)">Reset</button>
+          </div>
+          <div class="results" id="results-0"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Maguire (2000)</summary>
+        <div class="quiz-content" data-study="1">
+          <div class="question">
+            <p>1. What was the main focus of Maguire’s (2000) study?</p>
+            <label><input type="radio" name="q1-0" value="0"> Emotional regulation</label>
+            <label><input type="radio" name="q1-0" value="1"> Spatial navigation</label>
+            <label><input type="radio" name="q1-0" value="2"> Memory deficits</label>
+            <label><input type="radio" name="q1-0" value="3"> Motor skills</label>
+          </div>
+          <div class="question">
+            <p>2. Which brain region was primarily studied in Maguire’s research?</p>
+            <label><input type="radio" name="q1-1" value="0"> Amygdala</label>
+            <label><input type="radio" name="q1-1" value="1"> Hippocampus</label>
+            <label><input type="radio" name="q1-1" value="2"> Cerebellum</label>
+            <label><input type="radio" name="q1-1" value="3"> Frontal lobe</label>
+          </div>
+          <div class="question">
+            <p>3. Who were the participants in Maguire’s study?</p>
+            <label><input type="radio" name="q1-2" value="0"> Bus drivers</label>
+            <label><input type="radio" name="q1-2" value="1"> Taxi drivers</label>
+            <label><input type="radio" name="q1-2" value="2"> Local residents</label>
+            <label><input type="radio" name="q1-2" value="3"> University students</label>
+          </div>
+          <div class="question">
+            <p>4. What method was used to examine brain structure in the study?</p>
+            <label><input type="radio" name="q1-3" value="0"> Electroencephalography (EEG)</label>
+            <label><input type="radio" name="q1-3" value="1"> Magnetic resonance imaging (MRI)</label>
+            <label><input type="radio" name="q1-3" value="2"> Positron emission tomography (PET)</label>
+            <label><input type="radio" name="q1-3" value="3"> Behavioral assessments</label>
+          </div>
+          <div class="question">
+            <p>5. What was a key finding about the hippocampus in taxi drivers?</p>
+            <label><input type="radio" name="q1-4" value="0"> Smaller anterior hippocampus</label>
+            <label><input type="radio" name="q1-4" value="1"> Larger posterior hippocampus</label>
+            <label><input type="radio" name="q1-4" value="2"> No structural differences</label>
+            <label><input type="radio" name="q1-4" value="3"> Reduced overall volume</label>
+          </div>
+          <div class="question">
+            <p>6. What group served as the control in Maguire’s study?</p>
+            <label><input type="radio" name="q1-5" value="0"> Non-taxi drivers</label>
+            <label><input type="radio" name="q1-5" value="1"> Taxi driver trainees</label>
+            <label><input type="radio" name="q1-5" value="2"> Retired taxi drivers</label>
+            <label><input type="radio" name="q1-5" value="3"> Bus drivers</label>
+          </div>
+          <div class="question">
+            <p>7. What skill was linked to the brain changes observed?</p>
+            <label><input type="radio" name="q1-6" value="0"> Emotional intelligence</label>
+            <label><input type="radio" name="q1-6" value="1"> Spatial navigation</label>
+            <label><input type="radio" name="q1-6" value="2"> Verbal fluency</label>
+            <label><input type="radio" name="q1-6" value="3"> Mathematical reasoning</label>
+          </div>
+          <div class="question">
+            <p>8. What concept was supported by Maguire’s findings?</p>
+            <label><input type="radio" name="q1-7" value="0"> Neuroplasticity</label>
+            <label><input type="radio" name="q1-7" value="1"> Fixed brain structure</label>
+            <label><input type="radio" name="q1-7" value="2"> Genetic determinism</label>
+            <label><input type="radio" name="q1-7" value="3"> Emotion localization</label>
+          </div>
+          <div class="question">
+            <p>9. What was a limitation of Maguire’s study?</p>
+            <label><input type="radio" name="q1-8" value="0"> Small sample size</label>
+            <label><input type="radio" name="q1-8" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q1-8" value="2"> Absence of MRI scans</label>
+            <label><input type="radio" name="q1-8" value="3"> Non-randomized sampling</label>
+          </div>
+          <div class="question">
+            <p>10. What did the study suggest about brain adaptation?</p>
+            <label><input type="radio" name="q1-9" value="0"> Brains do not adapt</label>
+            <label><input type="radio" name="q1-9" value="1"> Brains restructure with experience</label>
+            <label><input type="radio" name="q1-9" value="2"> Brain size remains fixed</label>
+            <label><input type="radio" name="q1-9" value="3"> Adaptation occurs only in young brains</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(1)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(1)">Reset</button>
+          </div>
+          <div class="results" id="results-1"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Draganski (2004)</summary>
+        <div class="quiz-content" data-study="2">
+          <div class="question">
+            <p>1. What was the primary focus of Draganski’s (2004) study?</p>
+            <label><input type="radio" name="q2-0" value="0"> Memory deficits</label>
+            <label><input type="radio" name="q2-0" value="1"> Brain plasticity</label>
+            <label><input type="radio" name="q2-0" value="2"> Emotional changes</label>
+            <label><input type="radio" name="q2-0" value="3"> Motor skills</label>
+          </div>
+          <div class="question">
+            <p>2. What skill did participants learn in the study?</p>
+            <label><input type="radio" name="q2-1" value="0"> Chess</label>
+            <label><input type="radio" name="q2-1" value="1"> Juggling</label>
+            <label><input type="radio" name="q2-1" value="2"> Painting</label>
+            <label><input type="radio" name="q2-1" value="3"> Playing music</label>
+          </div>
+          <div class="question">
+            <p>3. What brain changes were observed in participants?</p>
+            <label><input type="radio" name="q2-2" value="0"> Increased grey matter</label>
+            <label><input type="radio" name="q2-2" value="1"> Smaller hippocampus</label>
+            <label><input type="radio" name="q2-2" value="2"> No structural changes</label>
+            <label><input type="radio" name="q2-2" value="3"> Larger frontal lobe</label>
+          </div>
+          <div class="question">
+            <p>4. What method was used to detect brain changes?</p>
+            <label><input type="radio" name="q2-3" value="0"> Electroencephalography (EEG)</label>
+            <label><input type="radio" name="q2-3" value="1"> Magnetic resonance imaging (MRI)</label>
+            <label><input type="radio" name="q2-3" value="2"> Behavioral assessments</label>
+            <label><input type="radio" name="q2-3" value="3"> Positron emission tomography (PET)</label>
+          </div>
+          <div class="question">
+            <p>5. What concept was supported by Draganski’s findings?</p>
+            <label><input type="radio" name="q2-4" value="0"> Fixed brain structure</label>
+            <label><input type="radio" name="q2-4" value="1"> Neuroplasticity</label>
+            <label><input type="radio" name="q2-4" value="2"> Genetic determinism</label>
+            <label><input type="radio" name="q2-4" value="3"> Localization of function</label>
+          </div>
+          <div class="question">
+            <p>6. What happened to brain changes after participants stopped juggling?</p>
+            <label><input type="radio" name="q2-5" value="0"> Changes persisted</label>
+            <label><input type="radio" name="q2-5" value="1"> Changes partially reversed</label>
+            <label><input type="radio" name="q2-5" value="2"> Changes increased</label>
+            <label><input type="radio" name="q2-5" value="3"> No data available</label>
+          </div>
+          <div class="question">
+            <p>7. Who were the participants in Draganski’s study?</p>
+            <label><input type="radio" name="q2-6" value="0"> Professional jugglers</label>
+            <label><input type="radio" name="q2-6" value="1"> Novice learners</label>
+            <label><input type="radio" name="q2-6" value="2"> Elderly adults</label>
+            <label><input type="radio" name="q2-6" value="3"> Children</label>
+          </div>
+          <div class="question">
+            <p>8. What was a limitation of Draganski’s study?</p>
+            <label><input type="radio" name="q2-7" value="0"> Small sample size</label>
+            <label><input type="radio" name="q2-7" value="1"> Lack of MRI scans</label>
+            <label><input type="radio" name="q2-7" value="2"> No control group</label>
+            <label><input type="radio" name="q2-7" value="3"> Invasive procedures</label>
+          </div>
+          <div class="question">
+            <p>9. What did the study conclude about learning new skills?</p>
+            <label><input type="radio" name="q2-8" value="0"> No brain changes occur</label>
+            <label><input type="radio" name="q2-8" value="1"> The brain adapts structurally</label>
+            <label><input type="radio" name="q2-8" value="2"> Changes are cognitive only</label>
+            <label><input type="radio" name="q2-8" value="3"> Changes are permanent</label>
+          </div>
+          <div class="question">
+            <p>10. Which brain region showed changes in the study?</p>
+            <label><input type="radio" name="q2-9" value="0"> Hippocampus</label>
+            <label><input type="radio" name="q2-9" value="1"> Visual-motor cortex</label>
+            <label><input type="radio" name="q2-9" value="2"> Amygdala</label>
+            <label><input type="radio" name="q2-9" value="3"> Cerebellum</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(2)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(2)">Reset</button>
+          </div>
+          <div class="results" id="results-2"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Loftus & Palmer (1974)</summary>
+        <div class="quiz-content" data-study="3">
+          <div class="question">
+            <p>1. What was the main focus of Loftus and Palmer’s (1974) study?</p>
+            <label><input type="radio" name="q3-0" value="0"> Emotional memory</label>
+            <label><input type="radio" name="q3-0" value="1"> Eyewitness memory reliability</label>
+            <label><input type="radio" name="q3-0" value="2"> Spatial navigation</label>
+            <label><input type="radio" name="q3-0" value="3"> Motor learning</label>
+          </div>
+          <div class="question">
+            <p>2. What did participants view in the study?</p>
+            <label><input type="radio" name="q3-1" value="0"> Live car accidents</label>
+            <label><input type="radio" name="q3-1" value="1"> Video clips of car accidents</label>
+            <label><input type="radio" name="q3-1" value="2"> Crime scene photographs</label>
+            <label><input type="radio" name="q3-1" value="3"> Animated crash simulations</label>
+          </div>
+          <div class="question">
+            <p>3. How was memory manipulated in the study?</p>
+            <label><input type="radio" name="q3-2" value="0"> By altering video quality</label>
+            <label><input type="radio" name="q3-2" value="1"> By changing question wording</label>
+            <label><input type="radio" name="q3-2" value="2"> By using different participants</label>
+            <label><input type="radio" name="q3-2" value="3"> By varying lighting conditions</label>
+          </div>
+          <div class="question">
+            <p>4. Which verb led to higher speed estimates in memory reports?</p>
+            <label><input type="radio" name="q3-3" value="0"> Contacted</label>
+            <label><input type="radio" name="q3-3" value="1"> Hit</label>
+            <label><input type="radio" name="q3-3" value="2"> Smashed</label>
+            <label><input type="radio" name="q3-3" value="3"> Bumped</label>
+          </div>
+          <div class="question">
+            <p>5. What false memory was reported by some participants?</p>
+            <label><input type="radio" name="q3-4" value="0"> Presence of broken glass</label>
+            <label><input type="radio" name="q3-4" value="1"> Presence of a pedestrian</label>
+            <label><input type="radio" name="q3-4" value="2"> Presence of a traffic light</label>
+            <label><input type="radio" name="q3-4" value="3"> Incorrect car color</label>
+          </div>
+          <div class="question">
+            <p>6. What concept was supported by the study’s findings?</p>
+            <label><input type="radio" name="q3-5" value="0"> Neuroplasticity</label>
+            <label><input type="radio" name="q3-5" value="1"> Memory reconstruction</label>
+            <label><input type="radio" name="q3-5" value="2"> Fixed memory</label>
+            <label><input type="radio" name="q3-5" value="3"> Genetic memory</label>
+          </div>
+          <div class="question">
+            <p>7. What was a limitation of Loftus and Palmer’s study?</p>
+            <label><input type="radio" name="q3-6" value="0"> Low ecological validity</label>
+            <label><input type="radio" name="q3-6" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q3-6" value="2"> Small sample size</label>
+            <label><input type="radio" name="q3-6" value="3"> Invasive procedures</label>
+          </div>
+          <div class="question">
+            <p>8. Which type of memory was affected in the study?</p>
+            <label><input type="radio" name="q3-7" value="0"> Procedural memory</label>
+            <label><input type="radio" name="q3-7" value="1"> Episodic memory</label>
+            <label><input type="radio" name="q3-7" value="2"> Semantic memory</label>
+            <label><input type="radio" name="q3-7" value="3"> Short-term memory</label> <!-- Original had $q3-7, corrected -->
+          </div>
+          <div class="question">
+            <p>9. Who were the participants in the first experiment?</p>
+            <label><input type="radio" name="q3-8" value="0"> Police officers</label>
+            <label><input type="radio" name="q3-8" value="1"> University students</label>
+            <label><input type="radio" name="q3-8" value="2"> Professional drivers</label>
+            <label><input type="radio" name="q3-8" value="3"> Elderly adults</label>
+          </div>
+          <div class="question">
+            <p>10. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q3-9" value="0"> Improved driving safety</label>
+            <label><input type="radio" name="q3-9" value="1"> Questioning eyewitness reliability</label>
+            <label><input type="radio" name="q3-9" value="2"> Development of memory training</label>
+            <label><input type="radio" name="q3-9" value="3"> Advances in MRI technology</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(3)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(3)">Reset</button>
+          </div>
+          <div class="results" id="results-3"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Newcomer et al (1999)</summary>
+        <div class="quiz-content" data-study="4">
+          <div class="question">
+            <p>1. What was the primary focus of Newcomer et al’s (1999) study?</p>
+            <label><input type="radio" name="q4-0" value="0"> Effects of stress hormones</label>
+            <label><input type="radio" name="q4-0" value="1"> Spatial navigation</label>
+            <label><input type="radio" name="q4-0" value="2"> Motor skill learning</label>
+            <label><input type="radio" name="q4-0" value="3"> Emotional regulation</label>
+          </div>
+          <div class="question">
+            <p>2. Which hormone was manipulated in the study?</p>
+            <label><input type="radio" name="q4-1" value="0"> Adrenaline</label>
+            <label><input type="radio" name="q4-1" value="1"> Cortisol</label>
+            <label><input type="radio" name="q4-1" value="2"> Dopamine</label>
+            <label><input type="radio" name="q4-1" value="3"> Serotonin</label>
+          </div>
+          <div class="question">
+            <p>3. How was cortisol administered to participants?</p>
+            <label><input type="radio" name="q4-2" value="0"> Via injections</label>
+            <label><input type="radio" name="q4-2" value="1"> Via oral tablets</label>
+            <label><input type="radio" name="q4-2" value="2"> Via inhalation</label>
+            <label><input type="radio" name="q4-2" value="3"> Via topical cream</label>
+          </div>
+          <div class="question">
+            <p>4. Which type of memory was impaired by cortisol?</p>
+            <label><input type="radio" name="q4-3" value="0"> Procedural memory</label>
+            <label><input type="radio" name="q4-3" value="1"> Declarative memory</label>
+            <label><input type="radio" name="q4-3" value="2"> Short-term memory</label>
+            <label><input type="radio" name="q4-3" value="3"> Sensory memory</label>
+          </div>
+          <div class="question">
+            <p>5. What did the control group receive in the study?</p>
+            <label><input type="radio" name="q4-4" value="0"> Placebo</label>
+            <label><input type="radio" name="q4-4" value="1"> Low-dose cortisol</label>
+            <label><input type="radio" name="q4-4" value="2"> No treatment</label>
+            <label><input type="radio" name="q4-4" value="3"> High-dose cortisol</label>
+          </div>
+          <div class="question">
+            <p>6. How was memory performance assessed in the study?</p>
+            <label><input type="radio" name="q4-5" value="0"> MRI scans</label>
+            <label><input type="radio" name="q4-5" value="1"> Recall tasks</label>
+            <label><input type="radio" name="q4-5" value="2"> EEG recordings</label>
+            <label><input type="radio" name="q4-5" value="3"> Blood tests</label>
+          </div>
+          <div class="question">
+            <p>7. What was a key finding of the study?</p>
+            <label><input type="radio" name="q4-6" value="0"> Cortisol enhanced memory</label>
+            <label><input type="radio" name="q4-6" value="1"> Cortisol impaired memory</label>
+            <label><input type="radio" name="q4-6" value="2"> Cortisol had no effect</label>
+            <label><input type="radio" name="q4-6" value="3"> Cortisol improved procedural memory</label>
+          </div>
+          <div class="question">
+            <p>8. What was a limitation of Newcomer’s study?</p>
+            <label><input type="radio" name="q4-7" value="0"> Artificial hormone administration</label>
+            <label><input type="radio" name="q4-7" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q4-7" value="2"> Small sample size</label>
+            <label><input type="radio" name="q4-7" value="3"> Absence of MRI scans</label>
+          </div>
+          <div class="question">
+            <p>9. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q4-8" value="0"> Stress impacts memory performance</label>
+            <label><input type="radio" name="q4-8" value="1"> Cortisol can cure amnesia</label>
+            <label><input type="radio" name="q4-8" value="2"> Memory is fixed</label>
+            <label><input type="radio" name="q4-8" value="3"> Hormones are irrelevant to memory</label>
+          </div>
+          <div class="question">
+            <p>10. What type of study design was used?</p>
+            <label><input type="radio" name="q4-9" value="0"> Correlational</label>
+            <label><input type="radio" name="q4-9" value="1"> Experimental</label>
+            <label><input type="radio" name="q4-9" value="2"> Observational</label>
+            <label><input type="radio" name="q4-9" value="3"> Case study</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(4)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(4)">Reset</button>
+          </div>
+          <div class="results" id="results-4"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Wedekind et al (1995)</summary>
+        <div class="quiz-content" data-study="5">
+          <div class="question">
+            <p>1. What was the primary focus of Wedekind et al’s (1995) study?</p>
+            <label><input type="radio" name="q5-0" value="0"> Memory and smell</label>
+            <label><input type="radio" name="q5-0" value="1"> Mate choice and MHC genes</label>
+            <label><input type="radio" name="q5-0" value="2"> Stress and olfaction</label>
+            <label><input type="radio" name="q5-0" value="3"> Learning and scent</label>
+          </div>
+          <div class="question">
+            <p>2. What did participants smell in the study?</p>
+            <label><input type="radio" name="q5-1" value="0"> Perfumes</label>
+            <label><input type="radio" name="q5-1" value="1"> Worn T-shirts</label>
+            <label><input type="radio" name="q5-1" value="2"> Food samples</label>
+            <label><input type="radio" name="q5-1" value="3"> Chemical compounds</label>
+          </div>
+          <div class="question">
+            <p>3. What genetic factor was investigated in the study?</p>
+            <label><input type="radio" name="q5-2" value="0"> Blood type</label>
+            <label><input type="radio" name="q5-2" value="1"> MHC genes</label>
+            <label><input type="radio" name="q5-2" value="2"> DNA mutations</label>
+            <label><input type="radio" name="q5-2" value="3"> Chromosome count</label>
+          </div>
+          <div class="question">
+            <p>4. What was a key finding about MHC gene preferences?</p>
+            <label><input type="radio" name="q5-3" value="0"> Preference for similar MHC</label>
+            <label><input type="radio" name="q5-3" value="1"> Preference for dissimilar MHC</label>
+            <label><input type="radio" name="q5-3" value="2"> No effect of MHC</label>
+            <label><input type="radio" name="q5-3" value="3"> Preference by males only</label>
+          </div>
+          <div class="question">
+            <p>5. What is the proposed purpose of MHC dissimilarity in mate choice?</p>
+            <label><input type="radio" name="q5-4" value="0"> Enhanced fertility</label>
+            <label><input type="radio" name="q5-4" value="1"> Immune system diversity</label>
+            <label><input type="radio" name="q5-4" value="2"> Social bonding</label>
+            <label><input type="radio" name="q5-4" value="3"> Physical attractiveness</label>
+          </div>
+          <div class="question">
+            <p>6. What was a limitation of Wedekind’s study?</p>
+            <label><input type="radio" name="q5-5" value="0"> Small sample size</label>
+            <label><input type="radio" name="q5-5" value="1"> Low ecological validity</label>
+            <label><input type="radio" name="q5-5" value="2"> Lack of a control group</label>
+            <label><input type="radio" name="q5-5" value="3"> Invasive procedures</label>
+          </div>
+          <div class="question">
+            <p>7. How were scent preferences assessed in the study?</p>
+            <label><input type="radio" name="q5-6" value="0"> MRI scans</label>
+            <label><input type="radio" name="q5-6" value="1"> Rating scent pleasantness</label>
+            <label><input type="radio" name="q5-6" value="2"> Blood tests</label>
+            <label><input type="radio" name="q5-6" value="3"> Behavioral observation</label>
+          </div>
+          <div class="question">
+            <p>8. Who were the participants in the study?</p>
+            <label><input type="radio" name="q5-7" value="0"> Male students</label>
+            <label><input type="radio" name="q5-7" value="1"> Female students</label>
+            <label><input type="radio" name="q5-7" value="2"> Mixed adult group</label>
+            <label><input type="radio" name="q5-7" value="3"> Elderly adults</label>
+          </div>
+          <div class="question">
+            <p>9. What psychological approach was supported by the study?</p>
+            <label><input type="radio" name="q5-8" value="0"> Neuroplasticity</label>
+            <label><input type="radio" name="q5-8" value="1"> Evolutionary psychology</label>
+            <label><input type="radio" name="q5-8" value="2"> Cognitive psychology</label>
+            <label><input type="radio" name="q5-8" value="3"> Behavioral psychology</label>
+          </div>
+          <div class="question">
+            <p>10. What variable was controlled during the study?</p>
+            <label><input type="radio" name="q5-9" value="0"> Participants’ diet</label>
+            <label><input type="radio" name="q5-9" value="1"> No use of deodorant</label>
+            <label><input type="radio" name="q5-9" value="2"> Clothing brand</label>
+            <label><input type="radio" name="q5-9" value="3"> Room temperature</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(5)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(5)">Reset</button>
+          </div>
+          <div class="results" id="results-5"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Weissman et al (2005)</summary>
+        <div class="quiz-content" data-study="6">
+          <div class="question">
+            <p>1. What was the primary focus of Weissman et al’s (2005) study?</p>
+            <label><input type="radio" name="q6-0" value="0"> Memory deficits</label>
+            <label><input type="radio" name="q6-0" value="1"> Brain activity during cognition</label>
+            <label><input type="radio" name="q6-0" value="2"> Emotional regulation</label>
+            <label><input type="radio" name="q6-0" value="3"> Motor skill development</label>
+          </div>
+          <div class="question">
+            <p>2. Which brain region was primarily studied?</p>
+            <label><input type="radio" name="q6-1" value="0"> Hippocampus</label>
+            <label><input type="radio" name="q6-1" value="1"> Prefrontal cortex</label>
+            <label><input type="radio" name="q6-1" value="2"> Amygdala</label>
+            <label><input type="radio" name="q6-1" value="3"> Cerebellum</label>
+          </div>
+          <div class="question">
+            <p>3. What method was used to measure brain activity?</p>
+            <label><input type="radio" name="q6-2" value="0"> Electroencephalography (EEG)</label>
+            <label><input type="radio" name="q6-2" value="1"> Functional MRI (fMRI)</label>
+            <label><input type="radio" name="q6-2" value="2"> Positron emission tomography (PET)</label>
+            <label><input type="radio" name="q6-2" value="3"> Behavioral assessments</label>
+          </div>
+          <div class="question">
+            <p>4. What cognitive process was investigated in the study?</p>
+            <label><input type="radio" name="q6-3" value="0"> Memory consolidation</label>
+            <label><input type="radio" name="q6-3" value="1"> Attention and inhibition</label>
+            <label><input type="radio" name="q6-3" value="2"> Spatial navigation</label>
+            <label><input type="radio" name="q6-3" value="3"> Emotional processing</label>
+          </div>
+          <div class="question">
+            <p>5. What task did participants perform in the study?</p>
+            <label><input type="radio" name="q6-4" value="0"> Stroop task</label>
+            <label><input type="radio" name="q6-4" value="1"> Memory recall task</label>
+            <label><input type="radio" name="q6-4" value="2"> Juggling task</label>
+            <label><input type="radio" name="q6-4" value="3"> Navigation task</label>
+          </div>
+          <div class="question">
+            <p>6. What was a key finding about the prefrontal cortex?</p>
+            <label><input type="radio" name="q6-5" value="0"> It was inactive during tasks</label>
+            <label><input type="radio" name="q6-5" value="1"> It was active during tasks</label>
+            <label><input type="radio" name="q6-5" value="2"> It showed no changes</label>
+            <label><input type="radio" name="q6-5" value="3"> It was less active than the hippocampus</label>
+          </div>
+          <div class="question">
+            <p>7. What was a limitation of the study?</p>
+            <label><input type="radio" name="q6-6" value="0"> Small sample size</label>
+            <label><input type="radio" name="q6-6" value="1"> Lack of fMRI scans</label>
+            <label><input type="radio" name="q6-6" value="2"> No control group</label>
+            <label><input type="radio" name="q6-6" value="3"> Invasive procedures</label>
+          </div>
+          <div class="question">
+            <p>8. What concept was supported by the study’s findings?</p>
+            <label><input type="radio" name="q6-7" value="0"> Neuroplasticity</label>
+            <label><input type="radio" name="q6-7" value="1"> Localization of function</label>
+            <label><input type="radio" name="q6-7" value="2"> Genetic determinism</label>
+            <label><input type="radio" name="q6-7" value="3"> Fixed brain structure</label>
+          </div>
+          <div class="question">
+            <p>9. Who were the participants in the study?</p>
+            <label><input type="radio" name="q6-8" value="0"> University students</label>
+            <label><input type="radio" name="q6-8" value="1"> Patients with brain injuries</label>
+            <label><input type="radio" name="q6-8" value="2"> Healthy adults</label>
+            <label><input type="radio" name="q6-8" value="3"> Children</label>
+          </div>
+          <div class="question">
+            <p>10. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q6-9" value="0"> Improved memory training</label>
+            <label><input type="radio" name="q6-9" value="1"> Enhanced cognitive control</label>
+            <label><input type="radio" name="q6-9" value="2"> Development of new drugs</label>
+            <label><input type="radio" name="q6-9" value="3"> Advances in navigation</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(6)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(6)">Reset</button>
+          </div>
+          <div class="results" id="results-6"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Rosenzweig et al (1972)</summary>
+        <div class="quiz-content" data-study="7">
+          <div class="question">
+            <p>1. What was the primary focus of Rosenzweig et al’s (1972) study?</p>
+            <label><input type="radio" name="q7-0" value="0"> Memory consolidation</label>
+            <label><input type="radio" name="q7-0" value="1"> Effects of enriched environments</label>
+            <label><input type="radio" name="q7-0" value="2"> Emotional regulation</label>
+            <label><input type="radio" name="q7-0" value="3"> Motor skill development</label>
+          </div>
+          <div class="question">
+            <p>2. Which animals were studied in the experiment?</p>
+            <label><input type="radio" name="q7-1" value="0"> Mice</label>
+            <label><input type="radio" name="q7-1" value="1"> Rats</label>
+            <label><input type="radio" name="q7-1" value="2"> Monkeys</label>
+            <label><input type="radio" name="q7-1" value="3"> Dogs</label>
+          </div>
+          <div class="question">
+            <p>3. What characterized the enriched condition in the study?</p>
+            <label><input type="radio" name="q7-2" value="0"> Solitary confinement</label>
+            <label><input type="radio" name="q7-2" value="1"> Toys and social interaction</label>
+            <label><input type="radio" name="q7-2" value="2"> Minimal stimulation</label>
+            <label><input type="radio" name="q7-2" value="3"> High-stress environment</label>
+          </div>
+          <div class="question">
+            <p>4. What brain change was observed in the enriched group?</p>
+            <label><input type="radio" name="q7-3" value="0"> Smaller cortex</label>
+            <label><input type="radio" name="q7-3" value="1"> Thicker cortex</label>
+            <label><input type="radio" name="q7-3" value="2"> No structural change</label>
+            <label><input type="radio" name="q7-3" value="3"> Smaller hippocampus</label>
+          </div>
+          <div class="question">
+            <p>5. What concept was supported by the study’s findings?</p>
+            <label><input type="radio" name="q7-4" value="0"> Fixed brain structure</label>
+            <label><input type="radio" name="q7-4" value="1"> Neuroplasticity</label>
+            <label><input type="radio" name="q7-4" value="2"> Genetic determinism</label>
+            <label><input type="radio" name="q7-4" value="3"> Localization of function</label>
+          </div>
+          <div class="question">
+            <p>6. What served as the control group in the study?</p>
+            <label><input type="radio" name="q7-5" value="0"> Enriched environment group</label>
+            <label><input type="radio" name="q7-5" value="1"> Standard cage group</label>
+            <label><input type="radio" name="q7-5" value="2"> Deprived environment group</label>
+            <label><input type="radio" name="q7-5" value="3"> No cage group</label>
+          </div>
+          <div class="question">
+            <p>7. What method was used to analyze brain changes?</p>
+            <label><input type="radio" name="q7-6" value="0"> MRI scans</label>
+            <label><input type="radio" name="q7-6" value="1"> Histological analysis</label>
+            <label><input type="radio" name="q7-6" value="2"> EEG recordings</label>
+            <label><input type="radio" name="q7-6" value="3"> Behavioral assessments</label>
+          </div>
+          <div class="question">
+            <p>8. What was a limitation of the study?</p>
+            <label><input type="radio" name="q7-7" value="0"> Use of animal models</label>
+            <label><input type="radio" name="q7-7" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q7-7" value="2"> Small sample size</label>
+            <label><input type="radio" name="q7-7" value="3"> Invasive procedures</label>
+          </div>
+          <div class="question">
+            <p>9. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q7-8" value="0"> Environment shapes brain development</label>
+            <label><input type="radio" name="q7-8" value="1"> Brain structure is fixed</label>
+            <label><input type="radio" name="q7-8" value="2"> Environment has no impact</label>
+            <label><input type="radio" name="q7-8" value="3"> Genetics solely determine brain structure</label>
+          </div>
+          <div class="question">
+            <p>10. Which variable was controlled in the study?</p>
+            <label><input type="radio" name="q7-9" value="0"> Diet</label>
+            <label><input type="radio" name="q7-9" value="1"> Lighting</label>
+            <label><input type="radio" name="q7-9" value="2"> Age</label>
+            <label><input type="radio" name="q7-9" value="3"> All of the above</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(7)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(7)">Reset</button>
+          </div>
+          <div class="results" id="results-7"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Bartlett (1932)</summary>
+        <div class="quiz-content" data-study="8">
+          <div class="question">
+            <p>1. What was the main focus of Bartlett’s (1932) study?</p>
+            <label><input type="radio" name="q8-0" value="0"> Motor skill learning</label>
+            <label><input type="radio" name="q8-0" value="1"> Memory reconstruction</label>
+            <label><input type="radio" name="q8-0" value="2"> Spatial navigation</label>
+            <label><input type="radio" name="q8-0" value="3"> Emotional processing</label>
+          </div>
+          <div class="question">
+            <p>2. Which story was used in the study to test memory?</p>
+            <label><input type="radio" name="q8-1" value="0"> War of the Ghosts</label>
+            <label><input type="radio" name="q8-1" value="1"> Cinderella</label>
+            <label><input type="radio" name="q8-1" value="2"> The Odyssey</label>
+            <label><input type="radio" name="q8-1" value="3"> Aesop’s Fables</label>
+          </div>
+          <div class="question">
+            <p>3. What method did Bartlett use to study memory?</p>
+            <label><input type="radio" name="q8-2" value="0"> Serial reproduction</label>
+            <label><input type="radio" name="q8-2" value="1"> MRI scans</label>
+            <label><input type="radio" name="q8-2" value="2"> Direct observation</label>
+            <label><input type="radio" name="q8-2" value="3"> EEG recordings</label>
+          </div>
+          <div class="question">
+            <p>4. What was a key finding about memory in the study?</p>
+            <label><input type="radio" name="q8-3" value="0"> Memory is fixed</label>
+            <label><input type="radio" name="q8-3" value="1"> Memory is reconstructed</label>
+            <label><input type="radio" name="q8-3" value="2"> Memory is perfectly accurate</label>
+            <label><input type="radio" name="q8-3" value="3"> Memory is genetically determined</label>
+          </div>
+          <div class="question">
+            <p>5. What influenced participants’ recall in the study?</p>
+            <label><input type="radio" name="q8-4" value="0"> Cultural schemas</label>
+            <label><input type="radio" name="q8-4" value="1"> Participant age</label>
+            <label><input type="radio" name="q8-4" value="2"> Dietary factors</label>
+            <label><input type="radio" name="q8-4" value="3"> Stress levels</label>
+          </div>
+          <div class="question">
+            <p>6. What concept was supported by Bartlett’s findings?</p>
+            <label><input type="radio" name="q8-5" value="0"> Neuroplasticity</label>
+            <label><input type="radio" name="q8-5" value="1"> Schema theory</label>
+            <label><input type="radio" name="q8-5" value="2"> Localization of function</label>
+            <label><input type="radio" name="q8-5" value="3"> Fixed memory structure</label>
+          </div>
+          <div class="question">
+            <p>7. What was a limitation of the study?</p>
+            <label><input type="radio" name="q8-6" value="0"> Low ecological validity</label>
+            <label><input type="radio" name="q8-6" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q8-6" value="2"> Invasive procedures</label>
+            <label><input type="radio" name="q8-6" value="3"> Small sample size</label>
+          </div>
+          <div class="question">
+            <p>8. Who were the participants in Bartlett’s study?</p>
+            <label><input type="radio" name="q8-7" value="0"> Children</label>
+            <label><input type="radio" name="q8-7" value="1"> University students</label>
+            <label><input type="radio" name="q8-7" value="2"> Elderly adults</label>
+            <label><input type="radio" name="q8-7" value="3"> Clinical patients</label>
+          </div>
+          <div class="question">
+            <p>9. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q8-8" value="0"> Memory is inherently unreliable</label>
+            <label><input type="radio" name="q8-8" value="1"> Memory is perfectly accurate</label>
+            <label><input type="radio" name="q8-8" value="2"> Brain structure is fixed</label>
+            <label><input type="radio" name="q8-8" value="3"> Culture has no impact on memory</label>
+          </div>
+          <div class="question">
+            <p>10. Which type of memory was primarily affected in the study?</p>
+            <label><input type="radio" name="q8-9" value="0"> Procedural memory</label>
+            <label><input type="radio" name="q8-9" value="1"> Episodic memory</label>
+            <label><input type="radio" name="q8-9" value="2"> Semantic memory</label>
+            <label><input type="radio" name="q8-9" value="3"> Short-term memory</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(8)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(8)">Reset</button>
+          </div>
+          <div class="results" id="results-8"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Tversky & Kahneman (1974)</summary>
+        <div class="quiz-content" data-study="9">
+          <div class="question">
+            <p>1. What was the primary focus of Tversky and Kahneman’s (1974) study?</p>
+            <label><input type="radio" name="q9-0" value="0"> Memory consolidation</label>
+            <label><input type="radio" name="q9-0" value="1"> Decision-making heuristics</label>
+            <label><input type="radio" name="q9-0" value="2"> Spatial navigation</label>
+            <label><input type="radio" name="q9-0" value="3"> Motor skill learning</label>
+          </div>
+          <div class="question">
+            <p>2. Which heuristic was primarily investigated in the study?</p>
+            <label><input type="radio" name="q9-1" value="0"> Availability heuristic</label>
+            <label><input type="radio" name="q9-1" value="1"> Confirmation bias</label>
+            <label><input type="radio" name="q9-1" value="2"> Sunk cost fallacy</label>
+            <label><input type="radio" name="q9-1" value="3"> Framing effect</label>
+          </div>
+          <div class="question">
+            <p>3. What method was used to study decision-making?</p>
+            <label><input type="radio" name="q9-2" value="0"> Surveys and questionnaires</label>
+            <label><input type="radio" name="q9-2" value="1"> MRI scans</label>
+            <label><input type="radio" name="q9-2" value="2"> Direct observation</label>
+            <label><input type="radio" name="q9-2" value="3"> EEG recordings</label>
+          </div>
+          <div class="question">
+            <p>4. What was a key finding about decision-making?</p>
+            <label><input type="radio" name="q9-3" value="0"> Decisions are perfectly rational</label>
+            <label><input type="radio" name="q9-3" value="1"> Heuristics lead to biases</label>
+            <label><input type="radio" name="q9-3" value="2"> Decisions are genetically determined</label>
+            <label><input type="radio" name="q9-3" value="3"> No biases occur in decisions</label>
+          </div>
+          <div class="question">
+            <p>5. What was an example used to illustrate the availability heuristic?</p>
+            <label><input type="radio" name="q9-4" value="0"> Judging accidents vs. diseases</label>
+            <label><input type="radio" name="q9-4" value="1"> Lottery winnings</label>
+            <label><input type="radio" name="q9-4" value="2"> Weather patterns</label>
+            <label><input type="radio" name="q9-4" value="3"> Stock market trends</label>
+          </div>
+          <div class="question">
+            <p>6. What concept was supported by the study’s findings?</p>
+            <label><input type="radio" name="q9-5" value="0"> Rational choice theory</label>
+            <label><input type="radio" name="q9-5" value="1"> Cognitive bias</label>
+            <label><input type="radio" name="q9-5" value="2"> Neuroplasticity</label>
+            <label><input type="radio" name="q9-5" value="3"> Localization of function</label>
+          </div>
+          <div class="question">
+            <p>7. What was a limitation of the study?</p>
+            <label><input type="radio" name="q9-6" value="0"> Low ecological validity</label>
+            <label><input type="radio" name="q9-6" value="1"> Lack of a control group</label>
+            <label><input type="radio" name="q9-6" value="2"> Invasive procedures</label>
+            <label><input type="radio" name="q9-6" value="3"> Small sample size</label>
+          </div>
+          <div class="question">
+            <p>8. Who were the participants in the study?</p>
+            <label><input type="radio" name="q9-7" value="0"> University students</label>
+            <label><input type="radio" name="q9-7" value="1"> Professionals</label>
+            <label><input type="radio" name="q9-7" value="2"> Children</label>
+            <label><input type="radio" name="q9-7" value="3"> Elderly adults</label>
+          </div>
+          <div class="question">
+            <p>9. What was a broader implication of the study?</p>
+            <label><input type="radio" name="q9-8" value="0"> Decisions are perfectly rational</label>
+            <label><input type="radio" name="q9-8" value="1"> Judgments are prone to biases</label>
+            <label><input type="radio" name="q9-8" value="2"> Heuristics are irrelevant</label>
+            <label><input type="radio" name="q9-8" value="3"> Brain structure is fixed</label>
+          </div>
+          <div class="question">
+            <p>10. Which field was significantly influenced by the study?</p>
+            <label><input type="radio" name="q9-9" value="0"> Behavioral economics</label>
+            <label><input type="radio" name="q9-9" value="1"> Neuropsychology</label>
+            <label><input type="radio" name="q9-9" value="2"> Clinical psychology</label>
+            <label><input type="radio" name="q9-9" value="3"> Developmental psychology</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(9)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(9)">Reset</button>
+          </div>
+          <div class="results" id="results-9"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Passamonti et al (2012) - Serotonin and Aggression (fMRI)</summary>
+        <div class="quiz-content" data-study="33">
+          <div class="question">
+            <p>1. What was the primary aim of Passamonti et al.'s (2012) study?</p>
+            <label><input type="radio" name="q33-0" value="0"> To investigate the effect of dopamine on mood regulation.</label>
+            <label><input type="radio" name="q33-0" value="1"> To examine how serotonin levels affect brain activity in response to emotional stimuli (e.g., angry faces) and its link to aggression.</label>
+            <label><input type="radio" name="q33-0" value="2"> To test a new antidepressant medication.</label>
+            <label><input type="radio" name="q33-0" value="3"> To study the role of genetics in predisposition to violence.</label>
+          </div>
+          <div class="question">
+            <p>2. How did the researchers manipulate serotonin levels in the participants?</p>
+            <label><input type="radio" name="q33-1" value="0"> By administering a serotonin-agonist drug.</label>
+            <label><input type="radio" name="q33-1" value="1"> Through dietary manipulation (acute tryptophan depletion, which reduces serotonin synthesis).</label>
+            <label><input type="radio" name="q33-1" value="2"> By asking participants to engage in activities known to boost serotonin.</label>
+            <label><input type="radio" name="q33-1" value="3"> By using transcranial magnetic stimulation (TMS).</label>
+          </div>
+          <div class="question">
+            <p>3. What neuroimaging technique was used to measure brain activity while participants viewed faces with different emotional expressions (e.g., angry, sad, neutral)?</p>
+            <label><input type="radio" name="q33-2" value="0"> EEG</label>
+            <label><input type="radio" name="q33-2" value="1"> PET scan</label>
+            <label><input type="radio" name="q33-2" value="2"> fMRI (functional Magnetic Resonance Imaging)</label>
+            <label><input type="radio" name="q33-2" value="3"> CT scan</label>
+          </div>
+          <div class="question">
+            <p>4. The study found that low serotonin levels (after tryptophan depletion) led to reduced activity in which brain region when viewing angry faces?</p>
+            <label><input type="radio" name="q33-3" value="0"> The hippocampus</label>
+            <label><input type="radio" name="q33-3" value="1"> The prefrontal cortex (PFC)</label>
+            <label><input type="radio" name="q33-3" value="2"> The cerebellum</label>
+            <label><input type="radio" name="q33-3" value="3"> The occipital lobe</label>
+          </div>
+          <div class="question">
+            <p>5. Simultaneously, low serotonin levels were associated with weaker functional connectivity (communication) between the prefrontal cortex and which other emotion-processing brain region?</p>
+            <label><input type="radio" name="q33-4" value="0"> The thalamus</label>
+            <label><input type="radio" name="q33-4" value="1"> The amygdala</label>
+            <label><input type="radio" name="q33-4" value="2"> The basal ganglia</label>
+            <label><input type="radio" name="q33-4" value="3"> The motor cortex</label>
+          </div>
+          <div class="question">
+            <p>6. What is a key function of the prefrontal cortex in the context of emotion and behavior?</p>
+            <label><input type="radio" name="q33-5" value="0"> Generating primary emotional responses.</label>
+            <label><input type="radio" name="q33-5" value="1"> Regulating emotional responses (e.g., inhibiting impulsive or aggressive reactions) and decision-making.</label>
+            <label><input type="radio" name="q33-5" value="2"> Processing sensory information from the eyes.</label>
+            <label><input type="radio" name="q33-5" value="3"> Coordinating balance and movement.</label>
+          </div>
+          <div class="question">
+            <p>7. The findings suggest that low serotonin might contribute to aggression by:</p>
+            <label><input type="radio" name="q33-6" value="0"> Directly increasing activity in aggressive brain circuits.</label>
+            <label><input type="radio" name="q33-6" value="1"> Impairing the prefrontal cortex's ability to control or dampen emotional responses generated by the amygdala, especially to provocation.</label>
+            <label><input type="radio" name="q33-6" value="2"> Enhancing empathy and social understanding.</label>
+            <label><input type="radio" name="q33-6" value="3"> Improving communication between all brain regions.</label>
+          </div>
+          <div class="question">
+            <p>8. Participants also completed a personality questionnaire. What was found about individuals with a natural tendency towards aggression?</p>
+            <label><input type="radio" name="q33-7" value="0"> They showed no effect of serotonin depletion.</label>
+            <label><input type="radio" name="q33-7" value="1"> They had stronger PFC activation when serotonin was low.</label>
+            <label><input type="radio" name="q33-7" value="2"> They showed even weaker PFC-amygdala communication when serotonin levels were reduced, suggesting heightened vulnerability.</label>
+            <label><input type="radio" name="q33-7" value="3"> Their serotonin levels were naturally very high.</label>
+          </div>
+          <div class="question">
+            <p>9. This study used a _________ design, where participants experienced both the serotonin depletion condition and the control (placebo) condition.</p>
+            <label><input type="radio" name="q33-8" value="0"> Independent samples</label>
+            <label><input type="radio" name="q33-8" value="1"> Repeated measures (within-subjects)</label>
+            <label><input type="radio" name="q33-8" value="2"> Matched pairs</label>
+            <label><input type="radio" name="q33-8" value="3"> Correlational</label>
+          </div>
+          <div class="question">
+            <p>10. A strength of this study is its use of:</p>
+            <label><input type="radio" name="q33-9" value="0"> Only self-report measures of aggression.</label>
+            <label><input type="radio" name="q33-9" value="1"> A combination of controlled experimental manipulation (tryptophan depletion) and neuroimaging (fMRI) to link neurochemical changes to brain function.</label>
+            <label><input type="radio" name="q33-9" value="2"> A very large and diverse sample from multiple countries.</label>
+            <label><input type="radio" name="q33-9" value="3"> A longitudinal design tracking participants for many years.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(33)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(33)">Reset</button>
+          </div>
+          <div class="results" id="results-33"></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Rogers & Kesner (2003) - Acetylcholine and Memory (Rats)</summary>
+        <div class="quiz-content" data-study="34">
+          <div class="question">
+            <p>1. What was the primary aim of Rogers & Kesner's (2003) study using rats?</p>
+            <label><input type="radio" name="q34-0" value="0"> To investigate the role of dopamine in reward learning.</label>
+            <label><input type="radio" name="q34-0" value="1"> To examine the effect of acetylcholine (ACh) on memory formation and retrieval, specifically spatial memory.</label>
+            <label><input type="radio" name="q34-0" value="2"> To test the impact of stress hormones on maze learning.</label>
+            <label><input type="radio" name="q34-0" value="3"> To compare the memory abilities of different rat strains.</label>
+          </div>
+          <div class="question">
+            <p>2. What task were the rats trained to perform to assess their spatial memory?</p>
+            <label><input type="radio" name="q34-1" value="0"> A lever-pressing task for food reward.</label>
+            <label><input type="radio" name="q34-1" value="1"> Navigating a Hebb-Williams maze to find food.</label>
+            <label><input type="radio" name="q34-1" value="2"> A fear conditioning task.</label>
+            <label><input type="radio" name="q34-1" value="3"> Recognizing familiar objects.</label>
+          </div>
+          <div class="question">
+            <p>3. The researchers manipulated acetylcholine levels in the rats' brains. One group was injected with scopolamine. What is the effect of scopolamine on acetylcholine?</p>
+            <label><input type="radio" name="q34-2" value="0"> It increases acetylcholine levels.</label>
+            <label><input type="radio" name="q34-2" value="1"> It blocks acetylcholine receptor sites (antagonist).</label>
+            <label><input type="radio" name="q34-2" value="2"> It mimics the effect of acetylcholine (agonist).</label>
+            <label><input type="radio" name="q34-2" value="3"> It has no effect on acetylcholine but affects dopamine.</label>
+          </div>
+          <div class="question">
+            <p>4. Another group of rats was injected with physostigmine. What is its effect on acetylcholine?</p>
+            <label><input type="radio" name="q34-3" value="0"> It blocks acetylcholine receptors.</label>
+            <label><input type="radio" name="q34-3" value="1"> It breaks down acetylcholine in the synapse more rapidly.</label>
+            <label><input type="radio" name="q34-3" value="2"> It inhibits acetylcholinesterase (the enzyme that breaks down ACh), thus increasing ACh levels/duration.</label>
+            <label><input type="radio" name="q34-3" value="3"> It has no effect on acetylcholine.</label>
+          </div>
+          <div class="question">
+            <p>5. How did the scopolamine (ACh antagonist) group perform on the maze task compared to the control (placebo) group?</p>
+            <label><input type="radio" name="q34-4" value="0"> They performed significantly better, making fewer errors.</label>
+            <label><input type="radio" name="q34-4" value="1"> They performed significantly worse, making more errors (impaired memory consolidation/retrieval).</label>
+            <label><input type="radio" name="q34-4" value="2"> Their performance was identical to the control group.</label>
+            <label><input type="radio" name="q34-4" value="3"> They refused to run the maze.</label>
+          </div>
+          <div class="question">
+            <p>6. What was observed about the performance of the physostigmine (ACh agonist/enhancer) group?</p>
+            <label><input type="radio" name="q34-5" value="0"> They made significantly more errors than the control group.</label>
+            <label><input type="radio" name="q34-5" value="1"> Their performance was generally better or showed faster learning/fewer errors compared to controls, though effects can be complex.</label>
+            <label><input type="radio" name="q34-5" value="2"> They showed no difference from the scopolamine group.</label>
+            <label><input type="radio" name="q34-5" value="3"> They became hyperactive and unable to complete the task.</label>
+          </div>
+          <div class="question">
+            <p>7. The findings of Rogers & Kesner's study suggest that acetylcholine plays an important role in:</p>
+            <label><input type="radio" name="q34-6" value="0"> Regulating sleep cycles.</label>
+            <label><input type="radio" name="q34-6" value="1"> The formation and/or retrieval of spatial memories.</label>
+            <label><input type="radio" name="q34-6" value="2"> Controlling appetite and thirst.</label>
+            <label><input type="radio" name="q34-6" value="3"> Processing auditory information.</label>
+          </div>
+          <div class="question">
+            <p>8. Which brain region, heavily involved in spatial memory, is known to have a high concentration of cholinergic neurons (neurons that use acetylcholine)?</p>
+            <label><input type="radio" name="q34-7" value="0"> The cerebellum</label>
+            <label><input type="radio" name="q34-7" value="1"> The amygdala</label>
+            <label><input type="radio" name="q34-7" value="2"> The hippocampus</label>
+            <label><input type="radio" name="q34-7" value="3"> The visual cortex</label>
+          </div>
+          <div class="question">
+            <p>9. A strength of using animal models in this type of neurotransmitter research is:</p>
+            <label><input type="radio" name="q34-8" value="0"> Rats can verbally report their memory experiences.</label>
+            <label><input type="radio" name="q34-8" value="1"> It allows for direct manipulation of brain chemistry (e.g., drug injections) and observation of causal effects on behavior that would be unethical in humans.</label>
+            <label><input type="radio" name="q34-8" value="2"> Rat brains are identical to human brains, ensuring perfect generalizability.</label>
+            <label><input type="radio" name="q34-8" value="3"> Rats have no long-term memory, simplifying the study.</label>
+          </div>
+          <div class="question">
+            <p>10. A limitation when generalizing findings from rat studies like this to humans is:</p>
+            <label><input type="radio" name="q34-9" value="0"> Rats learn mazes much faster than humans.</label>
+            <label><input type="radio" name="q34-9" value="1"> There may be differences in brain structure, function, and complexity between rats and humans, even if basic mechanisms are similar.</label>
+            <label><input type="radio" name="q34-9" value="2"> Acetylcholine has no role in human memory.</label>
+            <label><input type="radio" name="q34-9" value="3"> It is impossible to give rats drugs that affect neurotransmitters.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(34)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(34)">Reset</button>
+          </div>
+          <div class="results" id="results-34"></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Antonova et al (2011) - Scopolamine and Spatial Memory (Humans, fMRI)</summary>
+        <div class="quiz-content" data-study="35">
+          <div class="question">
+            <p>1. What was the main aim of Antonova et al.'s (2011) study?</p>
+            <label><input type="radio" name="q35-0" value="0"> To investigate the role of dopamine in reward processing using fMRI.</label>
+            <label><input type="radio" name="q35-0" value="1"> To investigate the effect of blocking acetylcholine receptors (using scopolamine) on spatial memory task performance and hippocampal activity in humans.</label>
+            <label><input type="radio" name="q35-0" value="2"> To test the effectiveness of scopolamine as a treatment for anxiety.</label>
+            <label><input type="radio" name="q35-0" value="3"> To compare spatial memory abilities in males and females.</label>
+          </div>
+          <div class="question">
+            <p>2. What task did participants perform while in the fMRI scanner to assess their spatial memory?</p>
+            <label><input type="radio" name="q35-1" value="0"> A verbal memory test recalling word lists.</label>
+            <label><input type="radio" name="q35-1" value="1"> A facial recognition task.</label>
+            <label><input type="radio" name="q35-1" value="2"> A virtual reality maze task ("Arena task") requiring navigation to find a target location.</label>
+            <label><input type="radio" name="q35-1" value="3"> A motor sequence learning task.</label>
+          </div>
+          <div class="question">
+            <p>3. What drug was administered to one group of participants to block acetylcholine receptors?</p>
+            <label><input type="radio" name="q35-2" value="0"> Physostigmine</label>
+            <label><input type="radio" name="q35-2" value="1"> Adrenaline</label>
+            <label><input type="radio" name="q35-2" value="2"> Scopolamine</label>
+            <label><input type="radio" name="q35-2" value="3"> A placebo</label>
+          </div>
+          <div class="question">
+            <p>4. What type of experimental design was used, where participants experienced both the drug condition and the placebo condition?</p>
+            <label><input type="radio" name="q35-3" value="0"> Independent groups design</label>
+            <label><input type="radio" name="q35-3" value="1"> Repeated measures design</label>
+            <label><input type="radio" name="q35-3" value="2"> Matched pairs design</label>
+            <label><input type="radio" name="q35-3" value="3"> Correlational design</label>
+          </div>
+          <div class="question">
+            <p>5. What was the key finding regarding performance on the spatial memory task in the scopolamine condition compared to the placebo condition?</p>
+            <label><input type="radio" name="q35-4" value="0"> Participants performed significantly better under scopolamine.</label>
+            <label><input type="radio" name="q35-4" value="1"> Participants showed significant impairment in performance (took longer, made more errors) under scopolamine.</label>
+            <label><input type="radio" name="q35-4" value="2"> There was no significant difference in task performance between conditions.</label>
+            <label><input type="radio" name="q35-4" value="3"> Scopolamine improved performance only for female participants.</label>
+          </div>
+          <div class="question">
+            <p>6. What difference in brain activity was observed in the hippocampus during the spatial navigation task under the influence of scopolamine?</p>
+            <label><input type="radio" name="q35-5" value="0"> Increased hippocampal activation.</label>
+            <label><input type="radio" name="q35-5" value="1"> Significant reduction in hippocampal activation.</label>
+            <label><input type="radio" name="q35-5" value="2"> No change in hippocampal activation.</label>
+            <label><input type="radio" name="q35-5" value="3"> Increased activation in the amygdala instead of the hippocampus.</label>
+          </div>
+          <div class="question">
+            <p>7. This study provides evidence that acetylcholine plays a crucial role in:</p>
+            <label><input type="radio" name="q35-6" value="0"> Processing visual information.</label>
+            <label><input type="radio" name="q35-6" value="1"> The encoding and consolidation of spatial memories in humans, associated with hippocampal activity.</label>
+            <label><input type="radio" name="q35-6" value="2"> Regulating mood and emotion primarily.</label>
+            <label><input type="radio" name="q35-6" value="3"> Controlling muscle movements.</label>
+          </div>
+          <div class="question">
+            <p>8. The use of fMRI allowed the researchers to:</p>
+            <label><input type="radio" name="q35-7" value="0"> Directly measure acetylcholine levels in the brain.</label>
+            <label><input type="radio" name="q35-7" value="1"> Observe changes in brain structure over time.</label>
+            <label><input type="radio" name="q35-7" value="2"> Correlate behavioral performance on the memory task with patterns of brain activity in specific regions like the hippocampus.</label>
+            <label><input type="radio" name="q35-7" value="3"> Administer the scopolamine drug non-invasively.</label>
+          </div>
+          <div class="question">
+            <p>9. Antonova et al.'s study builds upon earlier animal research (like Rogers & Kesner) by:</p>
+            <label><input type="radio" name="q35-8" value="0"> Disproving the role of acetylcholine found in rats.</label>
+            <label><input type="radio" name="q35-8" value="1"> Demonstrating a similar role for acetylcholine in human spatial memory and linking it to hippocampal function using neuroimaging.</label>
+            <label><input type="radio" name="q35-8" value="2"> Focusing exclusively on verbal memory instead of spatial memory.</label>
+            <label><input type="radio" name="q35-8" value="3"> Using a less reliable memory task.</label>
+          </div>
+          <div class="question">
+            <p>10. A double-blind procedure was likely used in this study. What does this mean?</p>
+            <label><input type="radio" name="q35-9" value="0"> Only the participants knew which condition they were in.</label>
+            <label><input type="radio" name="q35-9" value="1"> Only the researchers knew which condition the participants were in.</label>
+            <label><input type="radio" name="q35-9" value="2"> Neither the participants nor the researchers directly involved in data collection knew who received scopolamine and who received the placebo.</label>
+            <label><input type="radio" name="q35-9" value="3"> The study was conducted twice with different groups.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(35)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(35)">Reset</button>
+          </div>
+          <div class="results" id="results-35"></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>McGaugh & Cahill (1995) - Adrenaline and Emotional Memory</summary>
+        <div class="quiz-content" data-study="36">
+          <div class="question">
+            <p>1. What was the primary aim of McGaugh & Cahill's (1995) study?</p>
+            <label><input type="radio" name="q36-0" value="0"> To investigate the effect of acetylcholine on memory.</label>
+            <label><input type="radio" name="q36-0" value="1"> To study the role of the hormone adrenaline and the amygdala in the formation of emotional memories.</label>
+            <label><input type="radio" name="q36-0" value="2"> To examine the impact of serotonin levels on mood.</label>
+            <label><input type="radio" name="q36-0" value="3"> To test the accuracy of flashbulb memories over time.</label>
+          </div>
+          <div class="question">
+            <p>2. Participants in the study were shown a series of slides accompanied by a story. What was the key difference between the two story conditions?</p>
+            <label><input type="radio" name="q36-1" value="0"> One story was much longer than the other.</label>
+            <label><input type="radio" name="q36-1" value="1"> One story described a boring event (a boy visiting his father at work), while the other described an emotionally arousing event (the boy involved in a severe accident).</label>
+            <label><input type="radio" name="q36-1" value="2"> One story was told by a male narrator, the other by a female narrator.</label>
+            <label><input type="radio" name="q36-1" value="3"> One story involved animals, the other involved humans.</label>
+          </div>
+          <div class="question">
+            <p>3. Two weeks later, participants were tested on their memory for the details of the story. What was the general finding regarding recall for the two conditions?</p>
+            <label><input type="radio" name="q36-2" value="0"> Both groups recalled the story equally well.</label>
+            <label><input type="radio" name="q36-2" value="1"> The group who heard the boring story recalled significantly more details.</label>
+            <label><input type="radio" name="q36-2" value="2"> The group who heard the emotionally arousing story recalled significantly more details, especially from the emotional parts of the story.</label>
+            <label><input type="radio" name="q36-2" value="3"> Neither group could recall many details after two weeks.</label>
+          </div>
+          <div class="question">
+            <p>4. In a follow-up study, participants who heard the emotionally arousing story were injected with a drug. What drug was used to block the effects of adrenaline?</p>
+            <label><input type="radio" name="q36-3" value="0"> Scopolamine (acetylcholine blocker)</label>
+            <label><input type="radio" name="q36-3" value="1"> Propranolol (a beta-blocker that blocks adrenaline's effects)</label>
+            <label><input type="radio" name="q36-3" value="2"> Physostigmine (acetylcholine enhancer)</label>
+            <label><input type="radio" name="q36-3" value="3"> Naloxone (opioid blocker)</label>
+          </div>
+          <div class="question">
+            <p>5. What happened to the memory recall of participants who received the propranolol injection after hearing the emotional story?</p>
+            <label><input type="radio" name="q36-4" value="0"> Their memory for the emotional story was enhanced even further.</label>
+            <label><input type="radio" name="q36-4" value="1"> Their memory recall was no better than those who heard the boring story; the emotional enhancement effect was blocked.</label>
+            <label><input type="radio" name="q36-4" value="2"> They forgot the beginning of the story but remembered the end.</label>
+            <label><input type="radio" name="q36-4" value="3"> The drug had no effect on their memory recall.</label>
+          </div>
+          <div class="question">
+            <p>6. These findings suggest that the release of adrenaline during emotional events activates which brain region, crucial for emotional memory formation?</p>
+            <label><input type="radio" name="q36-5" value="0"> The prefrontal cortex</label>
+            <label><input type="radio" name="q36-5" value="1"> The hippocampus</label>
+            <label><input type="radio" name="q36-5" value="2"> The amygdala</label>
+            <label><input type="radio" name="q36-5" value="3"> The cerebellum</label>
+          </div>
+          <div class="question">
+            <p>7. According to the mechanism suggested by this research, adrenaline itself doesn't cross the blood-brain barrier easily, but it stimulates the release of ________ which activates the amygdala.</p>
+            <label><input type="radio" name="q36-6" value="0"> Serotonin</label>
+            <label><input type="radio" name="q36-6" value="1"> Noradrenaline (norepinephrine) in the brain</label>
+            <label><input type="radio" name="q36-6" value="2"> Dopamine</label>
+            <label><input type="radio" name="q36-6" value="3"> Acetylcholine</label>
+          </div>
+          <div class="question">
+            <p>8. The enhanced memory for emotional events is believed to have an evolutionary advantage because:</p>
+            <label><input type="radio" name="q36-7" value="0"> It makes life more interesting.</label>
+            <label><input type="radio" name="q36-7" value="1"> Remembering emotionally significant events (especially threats or rewards) helps survival and future decision-making.</label>
+            <label><input type="radio" name="q36-7" value="2"> It allows individuals to forget unpleasant experiences quickly.</label>
+            <label><input type="radio" name="q36-7" value="3"> It improves logical reasoning skills.</label>
+          </div>
+          <div class="question">
+            <p>9. This study provides strong evidence for the role of ________ in modulating memory consolidation.</p>
+            <label><input type="radio" name="q36-8" value="0"> Sleep</label>
+            <label><input type="radio" name="q36-8" value="1"> Hormones (like adrenaline) and emotional arousal</label>
+            <label><input type="radio" name="q36-8" value="2"> Diet and nutrition</label>
+            <label><input type="radio" name="q36-8" value="3"> Age-related cognitive decline</label>
+          </div>
+          <div class="question">
+            <p>10. A potential application of this research, involving drugs like propranolol, could be in:</p>
+            <label><input type="radio" name="q36-9" value="0"> Enhancing memory for students studying for exams.</label>
+            <label><input type="radio" name="q36-9" value="1"> Treating memory loss associated with Alzheimer's disease.</label>
+            <label><input type="radio" name="q36-9" value="2"> Preventing or reducing the emotional impact of traumatic memories (e.g., in PTSD).</label>
+            <label><input type="radio" name="q36-9" value="3"> Improving motor skills.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(36)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(36)">Reset</button>
+          </div>
+          <div class="results" id="results-36"></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Zhou et al (2014) - Pheromones and Gender Perception</summary>
+        <div class="quiz-content" data-study="37">
+          <div class="question">
+            <p>1. What was the primary aim of Zhou et al.'s (2014) study?</p>
+            <label><input type="radio" name="q37-0" value="0"> To investigate the effect of visual cues on gender perception.</label>
+            <label><input type="radio" name="q37-0" value="1"> To test whether the putative human pheromones AND (androstadienone) and EST (estratetraenol) influence the perception of gender in point-light walkers (PLWs).</label>
+            <label><input type="radio" name="q37-0" value="2"> To study the role of auditory cues in recognizing emotions.</label>
+            <label><input type="radio" name="q37-0" value="3"> To examine the impact of hormones on mate selection preferences.</label>
+          </div>
+          <div class="question">
+            <p>2. What are AND (androstadienone) and EST (estratetraenol) believed to be?</p>
+            <label><input type="radio" name="q37-1" value="0"> Common air freshener scents.</label>
+            <label><input type="radio" name="q37-1" value="1"> Neurotransmitters involved in memory.</label>
+            <label><input type="radio" name="q37-1" value="2"> Putative human sex pheromones (AND associated with males, EST with females).</label>
+            <label><input type="radio" name="q37-1" value="3"> Stress hormones released by the adrenal gland.</label>
+          </div>
+          <div class="question">
+            <p>3. What stimuli did participants view and judge the gender of?</p>
+            <label><input type="radio" name="q37-2" value="0"> Static photographs of faces.</label>
+            <label><input type="radio" name="q37-2" value="1"> Video clips of people talking.</label>
+            <label><input type="radio" name="q37-2" value="2"> Point-light walkers (PLWs) - animations of moving dots representing human figures.</label>
+            <label><input type="radio" name="q37-2" value="3"> Handwritten samples.</label>
+          </div>
+          <div class="question">
+            <p>4. How were the putative pheromones administered to the participants?</p>
+            <label><input type="radio" name="q37-3" value="0"> Through injections.</label>
+            <label><input type="radio" name="q37-3" value="1"> Participants smelled the substance (dissolved in cloves) while viewing the PLWs.</label>
+            <label><input type="radio" name="q37-3" value="2"> In pill form.</label>
+            <label><input type="radio" name="q37-3" value="3"> Applied topically to the skin.</label>
+          </div>
+          <div class="question">
+            <p>5. What effect did smelling AND have on heterosexual females and gay males when viewing the PLWs?</p>
+            <label><input type="radio" name="q37-4" value="0"> It made them perceive the PLWs as more feminine.</label>
+            <label><input type="radio" name="q37-4" value="1"> It biased them towards perceiving the PLWs as more masculine.</label>
+            <label><input type="radio" name="q37-4" value="2"> It had no significant effect on their gender perception.</label>
+            <label><input type="radio" name="q37-4" value="3"> It improved their overall accuracy in gender judgment.</label>
+          </div>
+          <div class="question">
+            <p>6. What effect did smelling EST have on heterosexual males when viewing the PLWs?</p>
+            <label><input type="radio" name="q37-5" value="0"> It biased them towards perceiving the PLWs as more masculine.</label>
+            <label><input type="radio" name="q37-5" value="1"> It had no significant effect on their gender perception.</label>
+            <label><input type="radio" name="q37-5" value="2"> It biased them towards perceiving the PLWs as more feminine.</label>
+            <label><input type="radio" name="q37-5" value="3"> It made them perceive all PLWs as neutral.</label>
+          </div>
+          <div class="question">
+            <p>7. The findings suggest that AND and EST may act as signals of gender and potentially influence:</p>
+            <label><input type="radio" name="q37-6" value="0"> Appetite regulation.</label>
+            <label><input type="radio" name="q37-6" value="1"> Spatial memory.</label>
+            <label><input type="radio" name="q37-6" value="2"> Communication of gender information relevant to sexual behavior or perception.</label>
+            <label><input type="radio" name="q37-6" value="3"> Sleep patterns.</label>
+          </div>
+          <div class="question">
+            <p>8. The study included different sexual orientation groups (heterosexual male, heterosexual female, gay male, lesbian female). Why was this important?</p>
+            <label><input type="radio" name="q37-7" value="0"> To ensure a larger sample size.</label>
+            <label><input type="radio" name="q37-7" value="1"> To test if the effects of the putative pheromones on gender perception were linked to the typical gender of the individuals they are attracted to.</label>
+            <label><input type="radio" name="q37-7" value="2"> To investigate cultural differences in pheromone perception.</label>
+            <label><input type="radio" name="q37-7" value="3"> To control for age effects.</label>
+          </div>
+          <div class="question">
+            <p>9. A major criticism or point of debate regarding human pheromone research, including this study, is:</p>
+            <label><input type="radio" name="q37-8" value="0"> The tasks used are too ecologically valid.</label>
+            <label><input type="radio" name="q37-8" value="1"> The concentrations of chemicals used are often much higher than naturally occurring levels, and effects might be due to cognitive factors (beliefs) rather than true pheromonal action.</label>
+            <label><input type="radio" name="q37-8" value="2"> Animal pheromones have never been proven to exist.</label>
+            <label><input type="radio" name="q37-8" value="3"> The studies fail to use control groups.</label>
+          </div>
+          <div class="question">
+            <p>10. The use of point-light walkers (PLWs) as stimuli is advantageous because:</p>
+            <label><input type="radio" name="q37-9" value="0"> They provide rich visual details about appearance.</label>
+            <label><input type="radio" name="q37-9" value="1"> They isolate biological motion cues related to gender, minimizing other visual cues like clothing or face shape.</label>
+            <label><input type="radio" name="q37-9" value="2"> They are easier for participants to remember.</label>
+            <label><input type="radio" name="q37-9" value="3"> They elicit strong emotional responses.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(37)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(37)">Reset</button>
+          </div>
+          <div class="results" id="results-37"></div>
+        </div>
+      </details>
+      <details>
+        <summary>Doucet et al (2009) - Areolar Glands and Infant Suckling</summary>
+        <div class="quiz-content" data-study="38">
+          <div class="question">
+            <p>1. What was the primary aim of Doucet et al.'s (2009) study?</p>
+            <label><input type="radio" name="q38-0" value="0"> To investigate the role of visual cues in infant feeding.</label>
+            <label><input type="radio" name="q38-0" value="1"> To determine if secretions from the areolar glands of lactating mothers act as an olfactory cue for infant suckling.</label>
+            <label><input type="radio" name="q38-0" value="2"> To compare the nutritional value of breast milk versus formula.</label>
+            <label><input type="radio" name="q38-0" value="3"> To study the effect of maternal voice on infant calming.</label>
+          </div>
+          <div class="question">
+            <p>2. Who were the participants in this study?</p>
+            <label><input type="radio" name="q38-1" value="0"> Lactating mothers</label>
+            <label><input type="radio" name="q38-1" value="1"> Fathers observing infant behavior</label>
+            <label><input type="radio" name="q38-1" value="2"> Three-day-old infants</label>
+            <label><input type="radio" name="q38-1" value="3"> Premature infants in an incubator</label>
+          </div>
+          <div class="question">
+            <p>3. What type of stimuli were presented to the infants to test their reaction?</p>
+            <label><input type="radio" name="q38-2" value="0"> Different musical sounds</label>
+            <label><input type="radio" name="q38-2" value="1"> Visual images of faces</label>
+            <label><input type="radio" name="q38-2" value="2"> Various olfactory (smell) stimuli, including areolar gland secretions, human milk, formula milk, and vanilla.</label>
+            <label><input type="radio" name="q38-2" value="3"> Different textured fabrics</label>
+          </div>
+          <div class="question">
+            <p>4. How was the infants' reaction to the different smells measured?</p>
+            <label><input type="radio" name="q38-3" value="0"> By recording changes in heart rate.</label>
+            <label><input type="radio" name="q38-3" value="1"> By observing changes in breathing rate and motor activity (e.g., mouth movements, head turning).</label>
+            <label><input type="radio" name="q38-3" value="2"> By measuring brain activity using EEG.</label>
+            <label><input type="radio" name="q38-3" value="3"> By asking mothers to rate their infant's preference.</label>
+          </div>
+          <div class="question">
+            <p>5. What was the key finding regarding the infants' reaction to the secretions from areolar glands?</p>
+            <label><input type="radio" name="q38-4" value="0"> Infants showed aversion and turned away from the scent.</label>
+            <label><input type="radio" name="q38-4" value="1"> Infants showed a significant increase in breathing rate and initiated suckling behaviors.</label>
+            <label><input type="radio" name="q38-4" value="2"> Infants reacted similarly to areolar secretions and vanilla.</label>
+            <label><input type="radio" name="q38-4" value="3"> Infants showed no reaction to any of the olfactory stimuli.</label>
+          </div>
+          <div class="question">
+            <p>6. How did the infants react to the smell of formula milk compared to areolar secretions?</p>
+            <label><input type="radio" name="q38-5" value="0"> They showed a much stronger preference for formula milk.</label>
+            <label><input type="radio" name="q38-5" value="1"> The reaction to formula milk was significantly weaker or absent compared to areolar secretions.</label>
+            <label><input type="radio" name="q38-5" value="2"> Both scents elicited identical suckling responses.</label>
+            <label><input type="radio" name="q38-5" value="3"> Formula milk caused infants to cry.</label>
+          </div>
+          <div class="question">
+            <p>7. The findings of Doucet et al. strongly suggest that areolar gland secretions contain:</p>
+            <label><input type="radio" name="q38-6" value="0"> Nutrients essential for infant growth.</label>
+            <label><input type="radio" name="q38-6" value="1"> Aversive compounds to deter biting.</label>
+            <label><input type="radio" name="q38-6" value="2"> Olfactory cues (potential pheromones) that stimulate feeding behavior in newborns.</label>
+            <label><input type="radio" name="q38-6" value="3"> Compounds that induce sleep in infants.</label>
+          </div>
+          <div class="question">
+            <p>8. What are pheromones?</p>
+            <label><input type="radio" name="q38-7" value="0"> Hormones that regulate internal body functions.</label>
+            <label><input type="radio" name="q38-7" value="1"> Chemical substances released by an animal that affect the behavior or physiology of others of the same species.</label>
+            <label><input type="radio" name="q38-7" value="2"> Neurotransmitters that carry signals between nerve cells.</label>
+            <label><input type="radio" name="q38-7" value="3"> Visual signals used for communication.</label>
+          </div>
+          <div class="question">
+            <p>9. This study provides evidence for the role of _________ communication in early human development and behavior.</p>
+            <label><input type="radio" name="q38-8" value="0"> Auditory</label>
+            <label><input type="radio" name="q38-8" value="1"> Visual</label>
+            <label><input type="radio" name="q38-8" value="2"> Olfactory (chemical)</label>
+            <label><input type="radio" name="q38-8" value="3"> Tactile</label>
+          </div>
+          <div class="question">
+            <p>10. Why might such an olfactory cue be particularly important for newborn infants?</p>
+            <label><input type="radio" name="q38-9" value="0"> Because their sense of taste is not yet developed.</label>
+            <label><input type="radio" name="q38-9" value="1"> Because their visual system is still relatively immature, making smell a more reliable guide to the nipple.</label>
+            <label><input type="radio" name="q38-9" value="2"> Because infants prefer strong smells over weak ones.</label>
+            <label><input type="radio" name="q38-9" value="3"> Because it helps them distinguish their mother from other females.</label>
+          </div>
+          <div class="buttons">
+            <button class="submit-btn" onclick="submitQuiz(38)">Submit</button>
+            <button class="reset-btn" onclick="resetQuiz(38)">Reset</button>
+          </div>
+          <div class="results" id="results-38"></div>
+        </div>
+      </details>
+
+    
+
+
+
+      <!-- Placeholder for remaining studies -->
+      <div id="quiz-placeholder">
+        <p style="text-align: center; color: #666;">More quizzes to be added here...</p>
+      </div>
+    </div>
+  </div>
+  <script>
+        const answers = {
+      0: ['2', '1', '1', '2', '2', '1', '1', '1', '0', '1'], // HM: Milner
+      1: ['1', '1', '1', '1', '1', '0', '1', '0', '0', '1'], // Maguire
+      2: ['1', '1', '0', '1', '1', '1', '1', '0', '1', '1'], // Draganski
+      3: ['1', '1', '1', '2', '0', '1', '0', '1', '1', '1'], // Loftus & Palmer
+      4: ['0', '1', '1', '1', '0', '1', '1', '0', '0', '1'], // Newcomer
+      5: ['1', '1', '1', '1', '1', '1', '1', '2', '1', '1'], // Wedekind
+      6: ['1', '1', '1', '1', '0', '1', '0', '1', '2', '1'], // Weissman (Note: Answers might need checking, original source info was limited)
+      7: ['1', '1', '1', '1', '1', '1', '1', '0', '0', '3'], // Rosenzweig
+      8: ['1', '0', '0', '1', '0', '1', '0', '1', '0', '1'], // Bartlett
+      9: ['1', '0', '0', '1', '0', '1', '0', '0', '1', '0'], // Tversky & Kahneman
+      10: ['1', '2', '2', '1', '2', '2', '1', '2', '1', '1'], // Bandura
+      11: ['1', '2', '1', '2', '2', '1', '1', '3', '1', '1'], // Asch
+      12: ['1', '2', '1', '2', '1', '1', '2', '1', '1', '2'], // Milgram
+      13: ['1', '1', '2', '1', '1', '1', '1', '1', '2', '1'], // Tajfel
+      14: ['1', '2', '1', '1', '1', '2', '1', '1', '1', '1'], // Sherif
+      15: ['2', '2', '1', '2', '1', '2', '1', '1', '2', '1'], // Hamilton & Gifford
+      16: ['1', '1', '2', '1', '1', '2', '1', '2', '1', '1'], // Festinger
+      17: ['1', '2', '1', '2', '1', '2', '1', '2', '1', '1'], // Peterson & Peterson
+      18: ['2', '1', '1', '1', '2', '1', '1', '2', '1', '1'], // Glanzer & Cunitz
+      19: ['1', '2', '1', '0', '1', '1', '1', '2', '1', '2'], // Baddeley & Hitch
+      20: ['2', '1', '1', '2', '1', '1', '1', '1', '1', '1'], // Brewer & Treyens
+      21: ['2', '2', '1', '2', '1', '1', '1', '2', '1', '1'], // Brown & Kulik
+      22: ['1', '1', '2', '1', '2', '1', '1', '2', '1', '1'], // Neisser & Harsch
+      23: ['2', '2', '2', '2', '1', '2', '2', '2', '3', '2'], // Sharot
+      24: ['1', '1', '2', '1', '2', '2', '1', '2', '2', '1'], // Berry
+      25: ['1', '2', '1', '1', '1', '1', '2', '1', '1', '1'], // Kulkofsky
+      26: ['1', '1', '2', '1', '2', '2', '2', '1', '1', '2'], // Fagot
+      27: ['1', '1', '2', '1', '1', '1', '2', '1', '1', '2'], // Miranda & Matheny
+      28: ['1', '1', '1', '1', '2', '1', '1', '2', '0', '1'], // Lueck & Wilson
+      29: ['2', '1', '1', '1', '2', '1', '2', '2', '1', '1'], // Caspi
+      30: ['1', '1', '2', '1', '1', '1', '2', '1', '1', '2'], // Kendler
+      31: ['1', '1', '1', '2', '1', '1', '1', '1', '2', '2'], // Meaney
+      32: ['1', '1', '1', '1', '1', '1', '2', '1', '2', '2'], // Ronay & von Hippel
+      33: ['1', '1', '2', '1', '1', '1', '1', '2', '1', '1'], // Passamonti
+      34: ['1', '1', '1', '2', '1', '1', '1', '2', '1', '1'], // Rogers & Kesner
+      35: ['1', '2', '2', '1', '1', '1', '1', '2', '1', '2'], // Antonova
+      36: ['1', '1', '2', '1', '1', '2', '1', '1', '1', '2'], // McGaugh & Cahill
+      37: ['1', '2', '2', '1', '1', '2', '2', '1', '1', '1'],  // Zhou
+      38: ['1', '2', '2', '1', '1', '1', '2', '1', '2', '1']  // Doucet
+      // Answers for Doucet et al. will be added in the next batch
+    };
+
+    function submitQuiz(studyIndex) {
+      const quizContent = document.querySelector(`.quiz-content[data-study="${studyIndex}"]`);
+      if (!quizContent) {
+        console.error(`Quiz content for studyIndex ${studyIndex} not found.`);
+        return;
+      }
+      const questions = quizContent.querySelectorAll('.question');
+      const resultsDiv = quizContent.querySelector(`#results-${studyIndex}`);
+      const submitBtn = quizContent.querySelector('.submit-btn');
+      const allRadios = quizContent.querySelectorAll('input[type="radio"]');
+      
+      let score = 0;
+      let output = '';
+      let allAnswered = true;
+
+      // Determine number of questions dynamically if possible, or assume 10 if answers[studyIndex] exists
+      const numQuestions = answers[studyIndex] ? answers[studyIndex].length : questions.length;
+
+      if (!answers[studyIndex]) {
+        resultsDiv.innerHTML = `<p class="error">Answers for quiz ${studyIndex} not found.</p>`;
+        resultsDiv.classList.add('show');
+        return;
+      }
+
+      for (let i = 0; i < numQuestions; i++) {
+        const questionDiv = questions[i];
+        if (!questionDiv) {
+            output += `<p>Error: Question ${i + 1} HTML structure not found.</p>`;
+            continue;
+        }
+        const questionText = questionDiv.querySelector('p').textContent;
+        const selectedRadio = quizContent.querySelector(`input[name="q${studyIndex}-${i}"]:checked`);
+        
+        if (!selectedRadio) {
+          output += `<p>Question ${i + 1} (${questionText.substring(0,30)}...): No answer selected.</p>`;
+          allAnswered = false; // If you want to enforce all questions answered, use this
+          continue; // Continue to check other questions or break/alert
+        }
+
+        const userAnswerValue = selectedRadio.value;
+        const correctAnswerValue = answers[studyIndex][i];
+        const isCorrect = userAnswerValue === correctAnswerValue;
+
+        let userAnswerLabel = "N/A";
+        if (selectedRadio.parentElement && selectedRadio.parentElement.nodeName === "LABEL") {
+            userAnswerLabel = selectedRadio.parentElement.textContent.trim().replace(selectedRadio.parentElement.querySelector('input').outerHTML, '').trim();
+             // A more robust way to get label text without the input's own text if it were somehow included
+            const tempLabel = selectedRadio.parentElement.cloneNode(true);
+            tempLabel.removeChild(tempLabel.querySelector('input'));
+            userAnswerLabel = tempLabel.textContent.trim();
+        }
+
+
+        let correctAnswerLabel = "Correct answer text not found";
+        const correctAnswerRadio = questionDiv.querySelector(`input[name="q${studyIndex}-${i}"][value="${correctAnswerValue}"]`);
+        if (correctAnswerRadio && correctAnswerRadio.parentElement && correctAnswerRadio.parentElement.nodeName === "LABEL") {
+            const tempCorrectLabel = correctAnswerRadio.parentElement.cloneNode(true);
+            tempCorrectLabel.removeChild(tempCorrectLabel.querySelector('input'));
+            correctAnswerLabel = tempCorrectLabel.textContent.trim();
+        }
+
+
+        if (isCorrect) {
+          score++;
+          output += `<p><b>Q${i + 1}:</b> Your answer "<span class="user-answer-text">${userAnswerLabel}</span>" was <b>Correct!</b> <span class="feedback-icon correct">✓</span></p>`;
+        } else {
+          output += `<p><b>Q${i + 1}:</b> Your answer "<span class="user-answer-text">${userAnswerLabel}</span>" was <b>Incorrect.</b> <span class="feedback-icon incorrect">✗</span><br>`;
+          output += `    Correct answer: "<span class="correct-answer-text">${correctAnswerLabel}</span>"</p>`;
+        }
+      }
+      
+      // Optional: if you want to ensure all questions are answered before submitting
+      // if (!allAnswered) {
+      //   alert("Please answer all questions before submitting.");
+      //   return;
+      // }
+
+      output = `<p><b>Your score: ${score}/${numQuestions}</b></p><hr>` + output;
+      resultsDiv.innerHTML = output;
+      resultsDiv.classList.add('show');
+      
+      if(submitBtn) submitBtn.disabled = true;
+      allRadios.forEach(radio => radio.disabled = true);
+    }
+
+    function resetQuiz(studyIndex) {
+      const quiz = document.querySelector(`.quiz-content[data-study="${studyIndex}"]`);
+      if (!quiz) return;
+      const radios = quiz.querySelectorAll('input[type="radio"]');
+      const results = quiz.querySelector(`#results-${studyIndex}`);
+      const submitBtn = quiz.querySelector('.submit-btn');
+
+      radios.forEach(radio => {
+        radio.checked = false;
+        radio.disabled = false;
+      });
+      if (results) {
+        results.innerHTML = '';
+        results.classList.remove('show');
+      }
+      if (submitBtn) submitBtn.disabled = false;
+    }
+
+    // Corrected the name attribute for Loftus & Palmer Q8 in the HTML from name="$q3-7" to name="q3-7"
+    // This function is not strictly necessary for adding quizzes but good for overall health.
+    // It ensures that all quiz containers exist for the defined answers.
+    function verifyQuizContainers() {
+        Object.keys(answers).forEach(studyIndex => {
+            if (!document.querySelector(`.quiz-content[data-study="${studyIndex}"]`)) {
+                console.warn(`Warning: HTML for quiz with data-study="${studyIndex}" is missing, but answers exist.`);
+            }
+        });
+    }
+
+    window.onload = function() {
+        verifyQuizContainers(); // Optional: run a check on load
+    };
+
+    window.onerror = function(message, source, lineno, colno, error) {
+      const container = document.querySelector('.container');
+      if (container) {
+        let errorMsg = '<p class="error">An error occurred. Please check the console for details or try refreshing the page.</p>';
+        if (message) errorMsg += `<p class="error" style="font-size:0.8em;">${message} at ${source}:${lineno}:${colno}</p>`;
+        container.innerHTML += errorMsg;
+      }
+      // Log the error to the console as well
+      console.error("JavaScript Error:", message, "at", source, ":", lineno, ":", colno, error);
+      return true; // Prevents the firing of the default event handler
+    };
+  </script>
+</body>
+</html>
