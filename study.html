@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Psych HL - Master Guide & Revision Tracker</title>
+    <style>
+        :root {
+            --duo-green: #58cc02;
+            --duo-green-dark: #46a302;
+            --duo-red: #ff4b4b;
+            --duo-red-dark: #d42c2c;
+            --duo-blue: #1cb0f6;
+            --duo-blue-dark: #1899d6;
+            --duo-gray: #e5e5e5;
+            --duo-text: #4b4b4b;
+            --bg-color: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--duo-text);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            background-color: var(--duo-blue);
+            color: white;
+            border: none;
+            border-bottom: 4px solid var(--duo-blue-dark);
+            padding: 15px 30px;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.1s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:active { transform: translateY(2px); border-bottom: 2px solid var(--duo-blue-dark); }
+        .btn-green { background-color: var(--duo-green); border-bottom: 4px solid var(--duo-green-dark); }
+        .btn-outline { background-color: white; color: var(--duo-text); border: 2px solid var(--duo-gray); border-bottom: 4px solid var(--duo-gray); }
+
+        /* --- Screens --- */
+        .screen { display: none; animation: fadeIn 0.3s ease-in-out; }
+        .screen.active { display: block; }
+
+        /* --- Flashcards --- */
+        .flashcard-container {
+            perspective: 1000px;
+            height: 650px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+
+        .flashcard.is-flipped { transform: rotateY(180deg); }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            padding: 25px;
+            box-sizing: border-box;
+            border: 2px solid var(--duo-gray);
+            background: white;
+        }
+
+        .card-front { justify-content: center; align-items: center; }
+        
+        .card-back {
+            transform: rotateY(180deg);
+            background-color: #fcfcfc;
+            overflow-y: auto;
+            text-align: left;
+            align-items: flex-start;
+        }
+        .card-back::-webkit-scrollbar { width: 6px; }
+        .card-back::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+        .tag {
+            background: var(--duo-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin: 3px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .detail-block {
+            margin-bottom: 18px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+            width: 100%;
+        }
+
+        .detail-label {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            font-weight: 800;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .detail-text { font-size: 0.95rem; color: var(--duo-text); line-height: 1.6; }
+        .def-item { margin-bottom: 8px; }
+        .highlight-term { background-color: #e3f6fc; color: var(--duo-blue-dark); padding: 0 4px; border-radius: 4px; font-weight: bold; }
+
+        /* --- Quiz --- */
+        .progress-container {
+            width: 100%;
+            background-color: var(--duo-gray);
+            height: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .progress-bar { height: 100%; background-color: var(--duo-green); width: 0%; transition: width 0.3s ease; }
+
+        .quiz-question { font-size: 1.1rem; font-weight: 700; margin-bottom: 15px; text-align: left; }
+        .quiz-context { font-size:0.8rem; color:#aaa; text-transform:uppercase; font-weight:800; margin-bottom:5px; text-align: left;}
+
+        .quiz-option {
+            background-color: white;
+            border: 2px solid var(--duo-gray);
+            border-bottom: 4px solid var(--duo-gray);
+            padding: 12px;
+            border-radius: 12px;
+            text-align: left;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .quiz-option:hover { background-color: #f7f7f7; }
+        .quiz-option.selected { border-color: var(--duo-blue); background-color: #ddf4ff; border-bottom-color: var(--duo-blue); color: var(--duo-blue-dark); }
+        .quiz-option.correct { background-color: #d7ffb8; border-color: var(--duo-green); color: var(--duo-green-dark); }
+        .quiz-option.wrong { background-color: #ffdfe0; border-color: var(--duo-red); color: var(--duo-red-dark); }
+
+        /* --- Feedback --- */
+        .feedback-area {
+            position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px;
+            background: white; border-top: 2px solid var(--duo-gray);
+            display: none; animation: slideUp 0.3s; z-index: 100; box-sizing: border-box;
+        }
+        .feedback-area.correct { background-color: #d7ffb8; border-color: #b8f28b; }
+        .feedback-area.wrong { background-color: #ffdfe0; border-color: #ffc1c7; }
+
+        /* --- Results Screen --- */
+        #revision-list {
+            text-align: left;
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        .revision-item {
+            background-color: #ffdfe0;
+            color: var(--duo-red-dark);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            border-left: 5px solid var(--duo-red);
+        }
+        .score-circle {
+            width: 120px; height: 120px;
+            background: var(--duo-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px auto;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- START -->
+        <div id="start-screen" class="screen active">
+            <h1 style="color:var(--duo-green);">IB Psych HL</h1>
+            <h2 style="margin-top:0;">Exam Survival Kit</h2>
+            <p>Paper 1 & Paper 2 Review</p>
+            <div style="text-align: left; background: #f9f9f9; padding: 15px; border-radius: 10px; font-size: 0.85rem; margin-bottom: 20px;">
+                <strong>Features:</strong><br>
+                ✅ Narrative briefs & Definitions<br>
+                ✅ Ethics & Critical Thinking<br>
+                ✅ <strong>Revision Tracker:</strong> We will tell you exactly which studies to study again at the end.
+            </div>
+            <button class="btn btn-green" onclick="startMode('cards')">Review Flashcards</button>
+            <button class="btn" onclick="startMode('quiz')">Start Scored Quiz</button>
+        </div>
+
+        <!-- CARDS -->
+        <div id="cards-screen" class="screen">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <button class="btn-outline" style="width:auto; padding: 5px 15px; margin:0;" onclick="goHome()">Exit</button>
+                <span style="font-weight:bold; color:#ccc;" id="card-counter">1 / 30</span>
+            </div>
+
+            <div class="flashcard-container" onclick="flipCard()">
+                <div class="flashcard" id="flashcard">
+                    <div class="card-face card-front">
+                        <h2 id="card-title">Study Name</h2>
+                        <div id="card-tags"></div>
+                        <p style="color:#999; font-size: 0.8rem; margin-top:20px;">(Tap to Flip)</p>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="detail-block">
+                            <span class="detail-label">Aim & Method</span>
+                            <div class="detail-text" id="card-amrc"></div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Key Definitions</span>
+                            <div class="detail-text" id="card-defs"></div>
+                        </div>
+                        <div class="detail-block">
+                            <span class="detail-label">Instruments & Details</span>
+                            <div class="detail-text" id="card-inst"></div>
+                        </div>
+                        <div class="detail-block" style="border:none;">
+                            <span class="detail-label" style="color:var(--duo-red-dark);">Evaluation & Ethics</span>
+                            <div class="detail-text" id="card-eval"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-outline" onclick="prevCard()">Prev</button>
+                <button class="btn btn-green" onclick="nextCard()">Next</button>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+            
+            <div class="quiz-context" id="quiz-context">Study Context</div>
+            <div class="quiz-question" id="question-text">Question text...</div>
+            <div id="options-container"></div>
+            
+            <div class="feedback-area" id="feedback-area">
+                <div style="font-weight:800; font-size:1.1rem; margin-bottom:5px;" id="feedback-title"></div>
+                <div style="font-size:0.9rem; margin-bottom:15px;" id="feedback-detail"></div>
+                <button class="btn btn-green" onclick="nextQuestion()">Continue</button>
+            </div>
+            
+            <button class="btn btn-gray" id="check-btn" style="margin-top: 10px; background:#eee; color:#aaa;" disabled onclick="checkAnswer()">Check</button>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="results-screen" class="screen">
+            <h1 id="result-header">Quiz Complete!</h1>
+            
+            <div class="score-circle" id="score-display">0%</div>
+            <p id="score-text">You answered X out of Y correctly on the first try.</p>
+
+            <div id="revision-container" style="display:none;">
+                <h3 style="color:var(--duo-red); text-align:left;">⚠️ Focus your revision here:</h3>
+                <div id="revision-list">
+                    <!-- Mistakes injected here -->
+                </div>
+            </div>
+            
+            <button class="btn btn-green" onclick="startMode('start')" style="margin-top:20px;">Restart</button>
+        </div>
+    </div>
+
+<script>
+    // --- MASTER DATA ---
+    const studyData = [
+        // --- BIOLOGICAL APPROACH ---
+        {
+            title: "Maguire et al. (2000)",
+            tags: ["Localization", "Plasticity", "Techniques"],
+            aimMethod: "Maguire aimed to investigate whether the hippocampus would change structure in response to high demands on spatial memory. She conducted a quasi-experiment comparing MRI scans of 16 right-handed male London taxi drivers against a control group of 50 non-taxi drivers.",
+            definitions: "<span class='highlight-term'>Neuroplasticity:</span> The brain's ability to rearrange its connections and structure in response to environmental demands.<br><span class='highlight-term'>Localization:</span> The theory that specific parts of the brain (e.g., Hippocampus) are responsible for specific functions (e.g., Spatial Memory).",
+            instruments: "<strong>Structural MRI:</strong> Used specific techniques: 1) <em>Voxel-Based Morphometry (VBM)</em> to measure density, and 2) <em>Pixel Counting</em> to calculate the volume of the hippocampus.",
+            eval: "<strong>WEIRD Sample:</strong> The study is gender-biased (only males) and culturally specific (London), limiting generalizability.<br><strong>Correlational:</strong> Because it was a quasi-experiment, we cannot be 100% sure driving caused the change, though the correlation with years driving suggests it.",
+            quiz: [
+                { q: "What specific technique was used to measure hippocampal volume?", options: ["fMRI", "Pixel Counting (MRI)", "PET Scan", "EEG"], correct: 1, expl: "Pixel counting on structural MRI scans was used." },
+                { q: "What was the key finding regarding the posterior hippocampus?", options: ["It was smaller", "It was larger in taxi drivers", "It showed no change", "It was damaged"], correct: 1, expl: "The posterior hippocampus (spatial memory) was significantly larger." },
+                { q: "Why is the sample considered 'WEIRD'?", options: ["It used animals", "It used only older women", "It used only right-handed London males", "It used patients with brain damage"], correct: 2, expl: "Western, Educated, Industrialized, Rich, Democratic (and all male)." }
+            ]
+        },
+        {
+            title: "Draganski et al. (2004)",
+            tags: ["Neuroplasticity", "Pruning"],
+            aimMethod: "This study investigated whether learning a new motor skill (juggling) would induce structural changes in the brain. Participants had MRI scans before learning, after 3 months of practice, and 3 months after stopping.",
+            definitions: "<span class='highlight-term'>Neural Pruning:</span> The process where extra neurons and synaptic connections are eliminated to increase the efficiency of neuronal transmissions.",
+            instruments: "<strong>Longitudinal MRI:</strong> Scans taken at three different time points to track changes over time.",
+            eval: "<strong>Ecological Validity:</strong> Juggling is a real-world skill, giving the study higher ecological validity than simple lab tasks.<br><strong>Control Group:</strong> A control group that did not juggle was used to ensure changes were due to the activity.",
+            quiz: [
+                { q: "What happened to the brain when participants STOPPED juggling?", options: ["It continued to grow", "It stayed the same", "Neural pruning occurred (shrinkage)", "The amygdala activated"], correct: 2, expl: "Without practice, the neural connections were pruned away." },
+                { q: "Which area of the brain showed growth?", options: ["Hippocampus", "Mid-temporal area (Visual Motion)", "Frontal Lobe", "Cerebellum"], correct: 1, expl: "The mid-temporal area processes visual motion." },
+                { q: "This study best demonstrates which biological principle?", options: ["Localization", "Neuroplasticity", "Hormones", "Pheromones"], correct: 1, expl: "It shows the brain changing structure in response to learning." }
+            ]
+        },
+        {
+            title: "HM (Milner, 1966)",
+            tags: ["Localization", "MSM"],
+            aimMethod: "A longitudinal case study of Henry Molaison, who had his hippocampus removed to stop epileptic seizures. Milner studied his resulting memory loss to understand the function of the hippocampus.",
+            definitions: "<span class='highlight-term'>Anterograde Amnesia:</span> The inability to form new long-term memories after the event that caused the amnesia.<br><span class='highlight-term'>Procedural Memory:</span> Memory for skills (like riding a bike), which relies on the basal ganglia, not the hippocampus.",
+            instruments: "<strong>Method Triangulation:</strong> Use of IQ tests, direct observation, interviews, and cognitive tasks (star tracing).",
+            eval: "<strong>Ethics (Consent):</strong> HM could not give true informed consent due to his memory condition, raising ethical concerns.<br><strong>Generalizability:</strong> As a unique case study of a damaged brain, findings may not apply perfectly to healthy brains.",
+            quiz: [
+                { q: "What type of memory could HM still form?", options: ["Semantic", "Episodic", "Procedural", "Flashbulb"], correct: 2, expl: "He could learn skills (like drawing), which is procedural." },
+                { q: "HM's case proved that the Hippocampus is vital for?", options: ["Storing long term memories", "Converting STM to LTM", "Muscle memory", "Vision"], correct: 1, expl: "He could not transfer STM to LTM (consolidation)." },
+                { q: "Why is informed consent an issue in this study?", options: ["He was a child", "He was forced", "His memory loss prevented true understanding", "He was paid too much"], correct: 2, expl: "He would forget he gave consent minutes later." }
+            ]
+        },
+        {
+            title: "Antonova et al. (2011)",
+            tags: ["Neurotransmitters", "fMRI"],
+            aimMethod: "Investigated if blocking Acetylcholine receptors affects spatial memory in humans. Men were injected with Scopolamine or a placebo and played a 'Virtual Arena' game while in an fMRI scanner.",
+            definitions: "<span class='highlight-term'>Antagonist:</span> A chemical (like Scopolamine) that binds to receptor sites and blocks the neurotransmitter from functioning.",
+            instruments: "<strong>fMRI (Functional MRI):</strong> Measures brain activity by detecting changes associated with blood flow.<br><strong>Virtual Reality:</strong> Used to simulate a spatial navigation task.",
+            eval: "<strong>Double-Blind:</strong> Neither the researchers nor the participants knew who had the drug, preventing bias.<br><strong>Ethics:</strong> Scopolamine causes temporary side effects, so medical supervision was required.",
+            quiz: [
+                { q: "What is Scopolamine classified as?", options: ["Agonist", "Antagonist", "Hormone", "Enzyme"], correct: 1, expl: "It blocks acetylcholine receptors." },
+                { q: "What was the effect of Scopolamine?", options: ["Increased hippocampus activity", "Reduced hippocampus activity", "Better memory", "Aggression"], correct: 1, expl: "It reduced activation in the hippocampus, impairing spatial memory." },
+                { q: "Why was a 'Double-Blind' design used?", options: ["To save money", "To prevent researcher and participant bias", "To use less drug", "To speed up the study"], correct: 1, expl: "Neither party knew who had the drug, preventing placebo effects." }
+            ]
+        },
+        {
+            title: "Rogers & Kesner (2003)",
+            tags: ["Neurotransmitters", "Animals"],
+            aimMethod: "Determined the role of Acetylcholine in memory formation. Rats ran a Hebb Williams maze and were injected with Scopolamine (blocker) or Physostigmine (booster) to see the effect on encoding and retrieval.",
+            definitions: "<span class='highlight-term'>Agonist:</span> A chemical that increases the effect of a neurotransmitter (Physostigmine).<br><span class='highlight-term'>Acetylcholine:</span> Neurotransmitter linked to synaptic plasticity and memory.",
+            instruments: "<strong>Hebb Williams Maze:</strong> A standardized maze used to test animal spatial memory and problem solving.",
+            eval: "<strong>Animal Ethics (The 3 Rs):</strong> Harm was caused (injections/stress), but the study provided cause-and-effect data impossible to get ethically in humans.",
+            quiz: [
+                { q: "Which group of rats learned the maze fastest?", options: ["Scopolamine", "Physostigmine", "Placebo", "Control"], correct: 1, expl: "Physostigmine prevents the breakdown of ACh, leaving more available for memory." },
+                { q: "What ethical framework is used for animal research?", options: ["The 3 Rs (Replace, Reduce, Refine)", "The Helsinki Declaration", "The Nuremberg Code", "HIPAA"], correct: 0, expl: "Replace, Reduce, Refine." },
+                { q: "This study establishes a clear ___ relationship.", options: ["Correlational", "Cause-and-Effect", "Descriptive", "Qualitative"], correct: 1, expl: "By manipulating the drug, they proved ACh causes memory changes." }
+            ]
+        },
+        {
+            title: "Baumgartner et al. (2008)",
+            tags: ["Hormones", "Trust"],
+            aimMethod: "Investigated the role of Oxytocin in trust following a breach of trust. Participants played a 'Trust Game' involving money exchange in an fMRI scanner after receiving Oxytocin or Placebo.",
+            definitions: "<span class='highlight-term'>Oxytocin:</span> A hormone produced in the hypothalamus, often linked to social bonding, trust, and reducing fear.",
+            instruments: "<strong>Nasal Spray:</strong> Used to administer the hormone directly to the brain.<br><strong>fMRI:</strong> Showed decreased activity in the Amygdala.",
+            eval: "<strong>Reductionism:</strong> Trust is a complex social phenomenon; reducing it to a single hormone ignores social and cognitive factors.<br><strong>Ecological Validity:</strong> The 'Trust Game' is artificial compared to real life relationships.",
+            quiz: [
+                { q: "How was Oxytocin administered?", options: ["Injection", "Pill", "Nasal Spray", "IV Drip"], correct: 2, expl: "Intranasal spray allows it to cross the blood-brain barrier." },
+                { q: "Oxytocin reduced activity in which brain region?", options: ["Hippocampus", "Amygdala", "Frontal Lobe", "Cerebellum"], correct: 1, expl: "It suppressed the Amygdala, reducing fear of betrayal." },
+                { q: "What happened when trust was broken?", options: ["Oxytocin group stopped trusting", "Oxytocin group continued to trust", "Placebo group fought back", "Everyone quit"], correct: 1, expl: "The Oxytocin group continued to invest despite the betrayal." }
+            ]
+        },
+        {
+            title: "Newcomer et al. (1999)",
+            tags: ["Hormones", "Stress"],
+            aimMethod: "Investigated whether high levels of Cortisol interfere with verbal memory. Participants were given High Cortisol, Low Cortisol, or Placebo tablets and asked to recall a prose paragraph.",
+            definitions: "<span class='highlight-term'>Cortisol:</span> A stress hormone. Chronic high levels are known to cause atrophy in the hippocampus.",
+            instruments: "<strong>Prose Recall Task:</strong> A standard cognitive test where participants listen to a paragraph and must recall details.",
+            eval: "<strong>Reversibility:</strong> A key ethical strength. The memory impairment was temporary, ensuring no permanent harm to participants.",
+            quiz: [
+                { q: "Which group had the worst memory performance?", options: ["High Cortisol", "Low Cortisol", "Placebo", "Control"], correct: 0, expl: "High levels of cortisol interfere with memory consolidation." },
+                { q: "What type of memory was tested?", options: ["Spatial", "Verbal Declarative", "Procedural", "Flashbulb"], correct: 1, expl: "Participants had to recall a prose paragraph (words)." },
+                { q: "Was the effect permanent?", options: ["Yes", "No, it was reversible", "Only for men", "Only for women"], correct: 1, expl: "Memory returned to normal after the cortisol washed out." }
+            ]
+        },
+        {
+            title: "Wedekind (1995)",
+            tags: ["Pheromones", "Evolution"],
+            aimMethod: "Investigated mate preference based on genetic makeup. Men wore T-shirts for 2 nights; women smelled them and rated attractiveness to see if they preferred dissimilar MHC genes.",
+            definitions: "<span class='highlight-term'>MHC Genes:</span> Major Histocompatibility Complex. Genes involved in immune system regulation. Diverse MHC = Stronger Immunity.",
+            instruments: "<strong>Cardboard Box:</strong> A specific tool with a smelling hole used to present the T-shirts blindly to women.",
+            eval: "<strong>Reductionism:</strong> This biological approach ignores culture and emotion in attraction.<br><strong>Double-Blind:</strong> Neither researchers nor women knew which shirt belonged to whom.",
+            quiz: [
+                { q: "What does MHC stand for?", options: ["Major Histocompatibility Complex", "Male Hormone Complex", "Mental Health Code", "Memory Hippocampus Center"], correct: 0, expl: "Genes related to immune system regulation." },
+                { q: "Women preferred the smell of men who had...", options: ["Similar MHC genes", "Dissimilar MHC genes", "High Testosterone", "Low Cortisol"], correct: 1, expl: "Dissimilar immune systems create healthier offspring." },
+                { q: "What variable reversed the findings?", options: ["Age", "Oral Contraceptives (The Pill)", "Hunger", "Time of day"], correct: 1, expl: "Women on the pill preferred SIMILAR MHC (mimicking pregnancy)." }
+            ]
+        },
+
+        // --- COGNITIVE APPROACH ---
+        {
+            title: "Glanzer & Cunitz (1966)",
+            tags: ["MSM", "Memory"],
+            aimMethod: "Tested the Multi-Store Model using the Serial Position Effect. Participants memorized words. Condition 1: Immediate recall. Condition 2: 30-sec delay with a distraction task.",
+            definitions: "<span class='highlight-term'>Primacy Effect:</span> Remembering the start of a list (LTM).<br><span class='highlight-term'>Recency Effect:</span> Remembering the end of a list (STM).",
+            instruments: "<strong>Interference Task:</strong> Counting backwards was used to prevent rehearsal, specifically targeting the Short Term Memory.",
+            eval: "<strong>Support for MSM:</strong> The study provides strong evidence that STM and LTM are separate stores because one could be impaired without the other.",
+            quiz: [
+                { q: "The 'Primacy Effect' (remembering first words) is due to?", options: ["STM", "LTM (Rehearsal)", "Sensory Buffer", "Echoic Memory"], correct: 1, expl: "First words are rehearsed enough to enter Long Term Memory." },
+                { q: "What destroyed the 'Recency Effect'?", options: ["A 30-second delay with counting", "A 10-second delay", "Loud noise", "Showing pictures"], correct: 0, expl: "Counting prevented rehearsal in STM, so the last words decayed." },
+                { q: "This study supports which model?", options: ["Working Memory", "Multi-Store Model", "Schema Theory", "Flashbulb Memory"], correct: 1, expl: "It proves STM and LTM are separate stores." }
+            ]
+        },
+        {
+            title: "Landry & Bartling (2011)",
+            tags: ["WMM", "Working Memory"],
+            aimMethod: "Tested the Working Memory Model using articulatory suppression. Participants had to recall lists of letters while saying '1, 2, 1, 2' repeatedly.",
+            definitions: "<span class='highlight-term'>Articulatory Suppression:</span> The process of inhibiting memory performance by speaking while being presented with an item to remember.",
+            instruments: "<strong>Dual Task Technique:</strong> Doing two tasks at once to see if they overload the same component (Phonological Loop).",
+            eval: "<strong>Artificiality:</strong> Memorizing random letters while counting is highly artificial and lacks ecological validity.",
+            quiz: [
+                { q: "What is 'Articulatory Suppression'?", options: ["Speaking to block the inner voice", "Closing eyes", "Holding breath", "Writing"], correct: 0, expl: "Saying '1, 2' overloads the Phonological Loop." },
+                { q: "The results showed that accuracy was...", options: ["Higher in experimental group", "Lower in experimental group", "The same", "Perfect"], correct: 1, expl: "The group saying '1, 2' couldn't rehearse the letters." },
+                { q: "Which component of Working Memory was tested?", options: ["Visuo-spatial Sketchpad", "Phonological Loop", "Central Executive", "Buffer"], correct: 1, expl: "The system that deals with verbal info." }
+            ]
+        },
+        {
+            title: "Loftus & Palmer (1974)",
+            tags: ["Schema", "Reconstruction"],
+            aimMethod: "Investigated leading questions. Participants watched a car crash video and were asked to estimate speed using different verbs (Smashed vs Hit).",
+            definitions: "<span class='highlight-term'>Misinformation Effect:</span> When misleading information incorporated into one's memory after an event corrupts the memory of the event itself.",
+            instruments: "<strong>Critical Question:</strong> 'How fast were the cars going when they [verb] each other?' This independent variable manipulated the schema.",
+            eval: "<strong>Application:</strong> This study has had a massive impact on legal systems, specifically regarding the reliability of Eyewitness Testimony.",
+            quiz: [
+                { q: "Which verb yielded the highest speed estimate?", options: ["Hit", "Contacted", "Smashed", "Bumped"], correct: 2, expl: "'Smashed' implies force, activating a schema of high speed." },
+                { q: "One week later, the 'Smashed' group falsely remembered?", options: ["Blood", "Broken Glass", "A police officer", "A stop sign"], correct: 1, expl: "The high-speed schema filled in the blank with broken glass." },
+                { q: "This study provides evidence for?", options: ["Flashbulb Memory", "Reconstructive Memory", "Genetic Memory", "Short Term Memory"], correct: 1, expl: "Memory is rebuilt and can be distorted by post-event info." }
+            ]
+        },
+        {
+            title: "Tversky & Kahneman (1974)",
+            tags: ["Biases", "Thinking"],
+            aimMethod: "Investigated Anchoring Bias. Participants spun a rigged wheel of fortune (landing on 10 or 65) and then estimated the percentage of African nations in the UN.",
+            definitions: "<span class='highlight-term'>Anchoring Bias:</span> The tendency to rely too heavily on the first piece of information offered (the 'anchor') when making decisions.<br><span class='highlight-term'>System 1:</span> Fast, intuitive, emotional thinking.",
+            instruments: "<strong>Rigged Wheel:</strong> A deceptive instrument used to ensure participants received specific high or low anchors.",
+            eval: "<strong>Deception:</strong> Participants were deceived about the randomness of the wheel, which was necessary to isolate the bias.",
+            quiz: [
+                { q: "When the wheel stopped on 65, the estimate was...", options: ["Lower (25%)", "Higher (45%)", "Accurate", "Zero"], correct: 1, expl: "The high anchor pulled the estimate upwards." },
+                { q: "This bias occurs because we use which system?", options: ["System 1 (Fast)", "System 2 (Slow)", "System 3 (Memory)", "System 4 (Motor)"], correct: 0, expl: "System 1 is lazy and grabs the first available number." },
+                { q: "Why was the wheel rigged?", options: ["To cheat", "To ensure specific High and Low anchors", "The machine was broken", "To make it fun"], correct: 1, expl: "They needed to control the Independent Variable (the anchor)." }
+            ]
+        },
+
+        // --- SOCIOCULTURAL APPROACH ---
+        {
+            title: "Bandura (1961)",
+            tags: ["SCT", "Enculturation"],
+            aimMethod: "Tested Social Cognitive Theory. Children watched an adult model behave aggressively towards a Bobo Doll, then were observed to see if they mimicked the behavior.",
+            definitions: "<span class='highlight-term'>Observational Learning:</span> Learning that occurs through observing the behavior of others. Components: Attention, Retention, Reproduction, Motivation.",
+            instruments: "<strong>Bobo Doll:</strong> An inflatable toy designed to bounce back when hit.<br><strong>Matched Pairs:</strong> Children were rated on aggression beforehand to ensure fair groups.",
+            eval: "<strong>Ethics (Harm):</strong> The study induced aggressive behavior in young children, which raises serious ethical concerns about long-term effects.",
+            quiz: [
+                { q: "What happened when children watched the aggressive adult?", options: ["They ran away", "They mimicked the aggression", "They played quietly", "They cried"], correct: 1, expl: "They physically and verbally attacked the doll." },
+                { q: "Which gender was more physically aggressive?", options: ["Boys", "Girls", "Neither", "Both equally"], correct: 0, expl: "Boys showed more physical aggression; girls more verbal." },
+                { q: "This study supports which theory?", options: ["Social Identity Theory", "Social Cognitive Theory", "Schema Theory", "Attachment Theory"], correct: 1, expl: "Learning via observation." }
+            ]
+        },
+        {
+            title: "Berry (1967)",
+            tags: ["Culture", "Dimensions"],
+            aimMethod: "Compared conformity rates in two cultures: Temne (Rice farmers) vs Inuit (Hunters) using the Asch line paradigm.",
+            definitions: "<span class='highlight-term'>Collectivism:</span> A cultural dimension where the group is prioritized over the individual (high conformity).<br><span class='highlight-term'>Individualism:</span> Prioritizes independence (low conformity).",
+            instruments: "<strong>Asch Paradigm:</strong> A standardized line-matching test used to measure conformity.",
+            eval: "<strong>Etic Approach:</strong> Using a Western test (Asch) in non-Western cultures. It allows comparison but might lack cultural validity.",
+            quiz: [
+                { q: "The Temne people are...", options: ["Hunters / Individualist", "Rice Farmers / Collectivist", "City dwellers", "Nomads"], correct: 1, expl: "Farming requires cooperation, leading to collectivism." },
+                { q: "Which group had the HIGHER conformity rate?", options: ["Temne", "Inuit", "Scots", "Americans"], correct: 0, expl: "Collectivists conform to maintain group harmony." },
+                { q: "Using a Western test (Asch) in other cultures is called?", options: ["Emic approach", "Etic approach", "Reductionist", "Holistic"], correct: 1, expl: "Imposing a measure from outside the culture." }
+            ]
+        },
+        {
+            title: "Steele & Aronson (1995)",
+            tags: ["Stereotypes", "Identity"],
+            aimMethod: "Investigated Stereotype Threat. African American and White students took a difficult verbal test under two conditions: 'Test of Intelligence' vs 'Problem Solving Task'.",
+            definitions: "<span class='highlight-term'>Stereotype Threat:</span> The anxiety experienced when one is at risk of confirming a negative stereotype about one's group.",
+            instruments: "<strong>GRE (Graduate Record Exam):</strong> A very difficult standardized test used to create frustration/difficulty.",
+            eval: "<strong>Spotlight Anxiety:</strong> The study suggests anxiety eats up Working Memory resources, leading to lower performance.",
+            quiz: [
+                { q: "When was the stereotype threat triggered?", options: ["When told it was a 'Problem Solving Task'", "When told it was a 'Test of Intelligence'", "When told it was 'Just for fun'", "When paid"], correct: 1, expl: "The label 'Intelligence' activated the negative stereotype." },
+                { q: "What was the result for African American participants?", options: ["Scored higher", "Scored lower in the Threat condition", "No difference", "Quit the study"], correct: 1, expl: "Performance dropped due to anxiety." },
+                { q: "What is the mechanism behind this?", options: ["Lack of knowledge", "Spotlight Anxiety", "Genetic difference", "Laziness"], correct: 1, expl: "Anxiety uses up working memory resources." }
+            ]
+        },
+
+        // --- ABNORMAL (PAPER 2) ---
+        {
+            title: "Caspi et al. (2003)",
+            tags: ["Abnormal", "Genes"],
+            aimMethod: "Longitudinal study investigating the interaction between the 5-HTT gene (short vs long alleles) and stressful life events in predicting depression.",
+            definitions: "<span class='highlight-term'>Diathesis-Stress Model:</span> The theory that mental disorders result from a combination of biological vulnerability (diathesis) and environmental stressors.",
+            instruments: "<strong>Genetic Screening:</strong> To identify alleles.<br><strong>Life-History Calendar:</strong> A structured interview to track stressful events over time.",
+            eval: "<strong>Correlation vs Causation:</strong> Having the gene was not a guarantee of depression; it required the environmental trigger (Stress).",
+            quiz: [
+                { q: "The 5-HTT gene regulates which neurotransmitter?", options: ["Dopamine", "Serotonin", "Acetylcholine", "GABA"], correct: 1, expl: "Serotonin is key for mood regulation." },
+                { q: "Participants were most likely to get depressed if they had?", options: ["Long alleles", "Short alleles + Stressful events", "Short alleles only", "No alleles"], correct: 1, expl: "The gene alone wasn't enough; stress was needed." },
+                { q: "This supports which model?", options: ["Biomedical", "Diathesis-Stress", "Cognitive", "Sociocultural"], correct: 1, expl: "Interaction between biology and environment." }
+            ]
+        },
+        {
+            title: "Joiner et al. (1999)",
+            tags: ["Abnormal", "Cognitive"],
+            aimMethod: "Investigated how 'Negative Thinking Styles' affect depression. University students were assessed on their thinking style before midterms.",
+            definitions: "<span class='highlight-term'>Cognitive Etiology:</span> The theory that the way we think (irrational/negative thoughts) causes the disorder.",
+            instruments: "<strong>Dysfunctional Attitudes Scale:</strong> A questionnaire to measure negative thinking patterns.",
+            eval: "<strong>Bidirectional Ambiguity:</strong> Does negative thinking cause depression, or does depression cause negative thinking? Joiner suggests it predicts it.",
+            quiz: [
+                { q: "Joiner found that students with negative thoughts who failed a test...", options: ["Got motivated", "Showed depressive symptoms", "Blamed others", "Studied harder"], correct: 1, expl: "Negative thinking + Stress (failure) = Depression symptoms." },
+                { q: "This supports Beck's theory of the...", options: ["Cognitive Triad", "Genetic Triad", "Social Triad", "Biological Triad"], correct: 0, expl: "Negative view of Self, World, Future." },
+                { q: "What distinguishes the Cognitive explanation?", options: ["It focuses on neurons", "It focuses on interpretation of events", "It focuses on society", "It focuses on childhood"], correct: 1, expl: "It's about how we interpret the world." }
+            ]
+        },
+        {
+            title: "Parker et al. (2001)",
+            tags: ["Abnormal", "Culture"],
+            aimMethod: "Compared Malaysian Chinese and Australian Caucasian patients with depression. Investigated the symptom to see if culture affects how depression is experienced.",
+            definitions: "<span class='highlight-term'>Somatization:</span> Expressing psychological distress through physical symptoms (e.g., body pain instead of sadness).",
+            instruments: "<strong>Questionnaire:</strong> Patients checked off their primary symptoms.",
+            eval: "<strong>Stigma:</strong> In collectivist cultures, mental illness is often stigmatized, leading patients to report physical pain instead of emotional pain.",
+            quiz: [
+                { q: "Chinese patients were more likely to report which symptoms?", options: ["Emotional (Sadness)", "Somatic (Physical pain)", "Suicidal thoughts", "Anger"], correct: 1, expl: "They reported insomnia, back pain, etc., rather than sadness." },
+                { q: "Western patients were more likely to report?", options: ["Mood/Cognitive symptoms", "Physical symptoms", "No symptoms", "Hunger"], correct: 0, expl: "They openly discussed sadness and hopelessness." },
+                { q: "This suggests that diagnosis needs to be...", options: ["Culturally sensitive", "Ignored", "Standardized strictly", "Based on MRI"], correct: 0, expl: "Doctors must recognize cultural variations in symptoms." }
+            ]
+        }
+    ];
+
+    // --- LOGIC ---
+    let cardIndex = 0;
+    let activeQuizQueue = [];
+    let isAnswerChecked = false;
+    let currentQuizIndex = 0;
+    
+    // --- SCORING & TRACKING VARIABLES ---
+    let score = 0;
+    let totalUniqueQuestions = 0;
+    let mistakes = new Set(); // Stores Study Titles
+    let questionsAttemptedIDs = new Set(); // Tracks specific question unique IDs to handle repeats
+
+    const screens = {
+        start: document.getElementById('start-screen'),
+        cards: document.getElementById('cards-screen'),
+        quiz: document.getElementById('quiz-screen'),
+        results: document.getElementById('results-screen')
+    };
+
+    function startMode(mode) {
+        Object.values(screens).forEach(s => s.classList.remove('active'));
+        if(mode === 'start') screens.start.classList.add('active');
+        if(mode === 'cards') { screens.cards.classList.add('active'); cardIndex=0; renderCard(); }
+        if(mode === 'quiz') { 
+            screens.quiz.classList.add('active'); 
+            
+            // RESET STATS
+            score = 0;
+            mistakes.clear();
+            questionsAttemptedIDs.clear();
+            activeQuizQueue = [];
+
+            // GENERATE QUEUE
+            studyData.forEach((study, sIdx) => {
+                if(study.quiz) {
+                    study.quiz.forEach((q, qIdx) => {
+                        // Create a unique ID for every question to track if it's been seen
+                        q.id = sIdx + "-" + qIdx;
+                        q.context = study.title; 
+                        activeQuizQueue.push(q);
+                    });
+                }
+            });
+            
+            // SHUFFLE QUESTIONS
+            activeQuizQueue.sort(() => Math.random() - 0.5); 
+            
+            // Set Total for Score Calculation
+            window.totalQs = activeQuizQueue.length;
+            
+            renderQuiz(); 
+        }
+    }
+
+    function goHome() { startMode('start'); }
+
+    // --- CARD RENDER ---
+    function renderCard() {
+        const s = studyData[cardIndex];
+        document.getElementById('card-title').innerText = s.title;
+        document.getElementById('card-tags').innerHTML = s.tags.map(t => `<span class="tag">${t}</span>`).join('');
+        document.getElementById('card-amrc').innerHTML = s.aimMethod;
+        document.getElementById('card-defs').innerHTML = s.definitions;
+        document.getElementById('card-inst').innerHTML = s.instruments;
+        document.getElementById('card-eval').innerHTML = s.eval;
+        document.getElementById('flashcard').classList.remove('is-flipped');
+        document.getElementById('card-counter').innerText = `${cardIndex+1} / ${studyData.length}`;
+    }
+    function nextCard() { if(cardIndex < studyData.length-1) { cardIndex++; renderCard(); } else { cardIndex=0; renderCard(); }}
+    function prevCard() { if(cardIndex > 0) { cardIndex--; renderCard(); } }
+    function flipCard() { document.getElementById('flashcard').classList.toggle('is-flipped'); }
+
+    // --- QUIZ RENDER ---
+    function renderQuiz() {
+        if(activeQuizQueue.length === 0) {
+            showResults();
+            return;
+        }
+        const q = activeQuizQueue[0];
+        
+        // Progress Bar
+        // Note: activeQuizQueue length fluctuates because we re-add wrong questions.
+        // We use questionsAttemptedIDs.size to estimate progress vs totalQs.
+        let pct = (questionsAttemptedIDs.size / window.totalQs) * 100;
+        if(pct > 100) pct = 95; 
+        document.getElementById('progress-bar').style.width = pct + '%';
+        
+        // Text
+        document.getElementById('quiz-context').innerText = "Topic: " + q.context;
+        document.getElementById('question-text').innerText = q.q;
+        
+        const cont = document.getElementById('options-container');
+        cont.innerHTML = '';
+
+        // --- RANDOMIZATION LOGIC ---
+        let optionsArr = q.options.map((optText, index) => {
+            return { text: optText, isCorrect: (index === q.correct) };
+        });
+
+        // Fisher-Yates Shuffle
+        for (let i = optionsArr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [optionsArr[i], optionsArr[j]] = [optionsArr[j], optionsArr[i]];
+        }
+
+        // Render Buttons
+        optionsArr.forEach((optObj) => {
+            const d = document.createElement('div');
+            d.className = 'quiz-option';
+            d.innerText = optObj.text;
+            d.onclick = () => selectOpt(d, optObj.isCorrect, q.expl);
+            cont.appendChild(d);
+        });
+        
+        // Reset State
+        isAnswerChecked = false;
+        document.getElementById('check-btn').disabled = true;
+        document.getElementById('check-btn').style.background = "#eee";
+        document.getElementById('check-btn').style.color = "#aaa";
+        document.getElementById('check-btn').style.display = "inline-block";
+        document.getElementById('feedback-area').style.display = 'none';
+        document.getElementById('feedback-area').classList.remove('correct', 'wrong');
+        document.getElementById('options-container').style.pointerEvents = 'auto';
+        
+        window.currentSelection = null;
+    }
+
+    function selectOpt(el, isCorrect, expl) {
+        if(isAnswerChecked) return;
+        document.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+        el.classList.add('selected');
+        window.currentSelection = { element: el, isCorrect: isCorrect, expl: expl };
+        const btn = document.getElementById('check-btn');
+        btn.disabled = false;
+        btn.style.background = "var(--duo-green)";
+        btn.style.color = "white";
+    }
+
+    function checkAnswer() {
+        if(isAnswerChecked || !window.currentSelection) return;
+        isAnswerChecked = true;
+        
+        const { element, isCorrect, expl } = window.currentSelection;
+        const q = activeQuizQueue[0];
+        const fb = document.getElementById('feedback-area');
+        
+        document.getElementById('check-btn').style.display = 'none';
+        fb.style.display = 'block';
+        document.getElementById('options-container').style.pointerEvents = 'none';
+
+        // Check if this is the first attempt at this specific question
+        const isFirstAttempt = !questionsAttemptedIDs.has(q.id);
+
+        if(isCorrect) {
+            element.classList.add('correct');
+            fb.classList.add('correct');
+            document.getElementById('feedback-title').innerText = "Correct!";
+            document.getElementById('feedback-detail').innerText = expl;
+            
+            if(isFirstAttempt) {
+                score++;
+                questionsAttemptedIDs.add(q.id);
+            }
+            activeQuizQueue.shift(); // Remove
+        } else {
+            element.classList.add('wrong');
+            fb.classList.add('wrong');
+            document.getElementById('feedback-title').innerText = "Not quite...";
+            document.getElementById('feedback-detail').innerText = expl;
+            
+            // Log Mistake
+            if(isFirstAttempt) {
+                mistakes.add(q.context); // Store Study Title
+                questionsAttemptedIDs.add(q.id);
+            }
+
+            // Push back to end of queue to repeat
+            const missed = activeQuizQueue.shift();
+            activeQuizQueue.push(missed);
+        }
+    }
+    
+    function nextQuestion() { renderQuiz(); }
+
+    function showResults() {
+        Object.values(screens).forEach(s => s.classList.remove('active'));
+        screens.results.classList.add('active');
+
+        const percentage = Math.round((score / window.totalQs) * 100);
+        document.getElementById('score-display').innerText = percentage + "%";
+        document.getElementById('score-text').innerText = `You answered ${score} out of ${window.totalQs} correctly on the first attempt.`;
+
+        const revContainer = document.getElementById('revision-container');
+        const revList = document.getElementById('revision-list');
+        revList.innerHTML = '';
+
+        if(mistakes.size > 0) {
+            revContainer.style.display = 'block';
+            mistakes.forEach(studyName => {
+                const div = document.createElement('div');
+                div.className = 'revision-item';
+                div.innerText = studyName;
+                revList.appendChild(div);
+            });
+        } else {
+            revContainer.style.display = 'none';
+            document.getElementById('result-header').innerText = "Perfect Score!";
+            document.getElementById('score-text').innerText = "You are absolutely ready for the exam.";
+        }
+    }
+
+</script>
+</body>
+</html>
